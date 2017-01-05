@@ -1,1 +1,1 @@
-sdfsdfdsfdsfsf
+# Command lines for using Petalinux 
