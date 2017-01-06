@@ -1,0 +1,87 @@
+ALL RED WORDS SHOULD BE MODIFIED TO YOUR OWN
+1.setup linux environment
+cd /petalinux-v2015.4-final
+source settings.sh
+note:you should reset the environment after rebooting or reopening the terminal.
+
+You can see these lines in the terminal
+PetaLinux environment set to '/home/wbh/Downloads/petalinux-v2015.4-final'
+INFO: Checking free disk space
+INFO: Checking installed tools
+INFO: Checking installed development libraries
+INFO: Checking network and other services
+
+2.create a new petalinux project using the following commands:
+(1) cretae a new petalinux project based on .hdf file(we use this one)
+petalinux-create --type project --template zynq --name zhang-zc706-01.ece.cornell.edu
+petalinux-config --get-hw-description=/home/wbh/workspace/ZC706_hw_platform
+note: you can modify the template(usually zynq) and your project name.
+
+Or (we find bsp has something wrong, so we strongly recommend you to use your own .hdf.)
+(2)create a new petalinux project based on bsp(board support backage)
+petalinux-create -t project -s /home/wbh/Downloads/Xilinx-ZC706-v2015.4-final.bsp --name zhang-zc706-01.ece.cornell.edu
+
+3.config the linux kernel in this step.
+(1) petalinux-config
+Subsystem AUTO Hardware Settings ¡ú Ethernet Settings ¡ú Ethernet MAC address ¡ú 00:0a:35:03:1b:b9
+Subsystem AUTO Hardware Settings ¡ú Advanced bootable images storage Settings ¡ú
+boot images Settings ¡ú images storage media ¡ú SD card
+Image Packing Configuration ¡ú Root filesystem type ¡ú SD card
+
+
+(2) petalinux-config -c rootfs
+Filesystem Packages ¡ú console/network ¡ú dropbear ¡ú selec dropbear-openssh-sftp-server
+Filesystem Packages ¡ú console/network ¡ú openssh ¡ú select openssh-sftp-server
+(3) petalinux-config -c kernel
+(4) save configuration and exit
+
+4.build the linux kernel.
+petalinux-build
+note: this step may take time.
+
+5.before packaging you should source Xlinx development tools
+source /home/wbh/SDSOC/SDSoC/2015.4/settings64.sh
+
+6.package the project to pack BOOT.BIN and image.eu
+cd images/linux
+petalinux-package --boot --format BIN --fsbl zynq_fsbl.elf --u-boot --force
+petalinux-package --image -c rootfs --format initramfs
+
+7.prepare SD card
+first install gparted
+sudo apt-get install gparted
+sudo gparted
+divide SD card into two partition, one for BOOT the other for rootfs.
+Mount SD card into your laptop
+open gparted
+rigth-click on the SD card and choose resize/move
+The first partition should be at least 40MB in size and formatted as a FAT filesystem. Ensure that there is 4MB of free space preceding the partition. The first partition will contain the bootloader, devicetree and kernel images. Label this partition as BOOT .
+The second partition should be formatted as an ext4 filesystem and can take up the remaining space on the SD card. This partition will store the system root filesystem. Label this partition as rootfs .
+
+8.copy files into SD card
+cp images/linux/BOOT.BIN  /media/wbh/BOOT/
+cp images/linux/image.ub  /media/wbh/BOOT/
+sudo cp images/linux/rootfs.cpio  /media/wbh/rootfs/
+
+9.extract the file system
+cd /media/wbh/rootfs
+sudo pax -rvf rootfs.cpio
+
+10.
+Connect the serial port on the board(UART) to your workstation.
+Open Tera Term on the workstation and start the preferred serial communication program with the baud rate set to 115200 on that console.
+Power off the board.
+Set the boot mode of the board to SD boot.
+   1       2    3  4    5
+down down up up down
+Plug the SD card into the board.
+Power on the board.
+Watch the serial console, you will see the boot messages:
+Type user name root and password root on the serial console to log into the PetaLinux system.
+
+11.connect the board on a remote host
+ssh root@zhang-zc706-01.ece.cornell.edu
+root@zhang-zc706-01.ece.cornell.edu's password:  root
+root@zhang-zc706-01:/# ls
+bin        dev        home       lib         media       proc        run         sys         usr
+boot        etc         init        lost+found   mnt         rootfs.cpio  sbin        tmp         var
