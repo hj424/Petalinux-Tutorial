@@ -23,15 +23,15 @@ petalinux-create -t project -s /home/wbh/Downloads/Xilinx-ZC706-v2015.4-final.bs
 
 3.config the linux kernel in this step.
 (1) petalinux-config
-Subsystem AUTO Hardware Settings ¡ú Ethernet Settings ¡ú Ethernet MAC address ¡ú 00:0a:35:03:1b:b9
-Subsystem AUTO Hardware Settings ¡ú Advanced bootable images storage Settings ¡ú
-boot images Settings ¡ú images storage media ¡ú SD card
-Image Packing Configuration ¡ú Root filesystem type ¡ú SD card
+Subsystem AUTO Hardware Settings -> Ethernet Settings -> Ethernet MAC address -> 00:0a:35:03:1b:b9
+Subsystem AUTO Hardware Settings -> Advanced bootable images storage Settings ->
+boot images Settings -> images storage media -> SD card
+Image Packing Configuration -> Root filesystem type -> SD card
 
 
 (2) petalinux-config -c rootfs
-Filesystem Packages ¡ú console/network ¡ú dropbear ¡ú selec dropbear-openssh-sftp-server
-Filesystem Packages ¡ú console/network ¡ú openssh ¡ú select openssh-sftp-server
+Filesystem Packages -> console/network -> dropbear -> selec dropbear-openssh-sftp-server
+Filesystem Packages -> console/network -> openssh -> select openssh-sftp-server
 (3) petalinux-config -c kernel
 (4) save configuration and exit
 
@@ -72,7 +72,7 @@ Connect the serial port on the board(UART) to your workstation.
 Open Tera Term on the workstation and start the preferred serial communication program with the baud rate set to 115200 on that console.
 Power off the board.
 Set the boot mode of the board to SD boot.
-   1       2    3  4    5
+   1   2   3  4  5
 down down up up down
 Plug the SD card into the board.
 Power on the board.
