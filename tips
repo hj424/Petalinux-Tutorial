@@ -1,0 +1,9 @@
+//tips
+
+1. edit path
+    export PATH=$PATH:/bin
+2. provide permission for some appication
+    mkdir /var/run/console
+    touch /var/run/console/yourusername
+    chmod +s /sbin/reboot
+    chmod +s /sbin/halt
