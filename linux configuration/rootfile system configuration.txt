@@ -35,3 +35,19 @@
         1.1.28 util-linux: a suite of basic system administration utilities    
     1.2 base/shell: linux bash shell
     1.3 console/network
+        1.3.1 bridge-utils: connect two Ethernet segments together in a protocol independent way
+        1.3.2 dropbear: relatively small SSH server and client *****
+        1.3.3 ethtool: displaying and modifying some parameters of network interface controllers (NIC) and their device drivers
+        1.3.4 netcat: computer networking utility for reading from and writing to network connections using TCP or UDP
+        1.3.5 openssh: open BSD secure shell - a suite of security related network level utilities
+        1.3.6 portmap: an open networking computing remote procedure call service that runs on network nodes that provide other ONC RPC services.
+        1.3.7 tcp-wrappers: host based networking ACL system, used to filter network access
+        1.3.8 tcpdump: common packet analyzerthat runs under the command line
+    1.4 console/utils
+        1.4.1 bzip2: free and open source compression program
+        1.4.2 pciutils: various utilities dealing with the PCI bus, e.g. listing PCI devices, inspecting their status and their configuration registers
+        1.4.3 strace: diagnostic, debuggin and instructional userspace utility for linux, used to monitor and tamper interactions between processed and the linux kernel, e.g. system calls, signal deliveries and changes of process state
+        1.4.4 unzip: program for decompress files
+    1.5 devel
+        1.5.1 flex: fast lexical analyzer generator
+        
