@@ -50,4 +50,10 @@
         1.4.4 unzip: program for decompress files
     1.5 devel
         1.5.1 flex: fast lexical analyzer generator
+        1.5.2 gmp: free library for arbitrary precision arithmatic, operating on signed integers, rational numbers, and floating-point numbers.
+        1.5.3 libpcre: PCRE library - perl compatible reuglar expressions
+        1.5.4 oprofile: a system-wide statistical profiling tool
+        1.5.5 perl: a family of high-level, general-purpose, intepreted, dynamic programming languages
+    1.6 doc: document for various modules
+    1.7 libs:
         
