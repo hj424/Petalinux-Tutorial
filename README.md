@@ -10,8 +10,8 @@ The basic structure of this tutorial shows as following:
 
 1. Commandlines for using Petalinux
 2. Details about Linux configuration
-  1. general configuration 
-  2. rootfs configuration  
-  3. kernel configuration
+  1. General configuration 
+  2. Rootfs configuration  
+  3. Kernel configuration
 3. Linux system files: image.ub; BOOT.bin; rootfs.cpio;
 4. Open issues
