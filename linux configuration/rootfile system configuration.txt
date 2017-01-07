@@ -1,0 +1,1 @@
+# Basic introduction about root file system configuration
