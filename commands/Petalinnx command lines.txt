@@ -38,3 +38,49 @@
         
         (1) Subsystem AUTO Hardware Settings → Ethernet Settings → Ethernet MAC address → <MAC address of your board>
         (2) Image Packing Configuration → Root filesystem type → SD card (For permanent storage)
+        (3) Auto Config Settings ---> [ ] kernel autoconfig ***Disable the kernel auto configure setting***
+        
+    4.2 Root file system configration
+        $ cd <directory of petalinux project>
+        $ petalinux-config -c rootfs
+ 
+        (1) Filesystem Packages → console/network → dropbear → enable dropbear-openssh-sftp-server
+        (2) Filesystem Packages → console/network → openssh → enable openssh-sftp-server
+        * enable ssh remote login
+        (3) Filesystem Packages → base → openssh → external-xilinx-toolchain → enable libstdc++6
+        (4) Filesystem Packages → base → openssh → external-xilinx-toolchain → enable tcf-agent
+        * enable libray and function for SDSoC
+        
+    4.3 Kernel configuration
+        $ cd <directory of petalinux project>
+        $ petalinux-config -c kernel
+        
+        (1) kernel features → enable contiguous memory allocator
+        (2) device drivers → generic driver options → enable DMA contiguous memory allocator 
+        (3) device drivers → generic driver options → size in mega bytes [256]
+        (4) device drivers → enable staging drivers; Xilinx APF accelerator driver; Xilinx APF DMA engines support
+        
+    4.4 Extra configuration
+       $ vi <directory of project>/subsystems/linux/configs/device-tree/system-top.dts
+       append following code:
+            &clkc {
+               fclk-enable = <0xf>;
+            };
+            / {
+               xlnk {
+               compatible = "xlnx,xlnk-1.0";
+               clock-names = "xclk0", "xclk1", "xclk2", "xclk3";
+               clocks = <&clkc 15>, <&clkc 16>, <&clkc 17>, <&clkc 18>;
+               };
+             };   
+
+5. Build the Linux system
+      $ petalinux-build
+      * Note: this step may take time
+     
+6. For packaging your Linux kernel, SDSoC is required. So please source SDSoC like this:
+      source <directory of SDSoC>/SDSoC/2015.4/license.sh
+      source <directory of SDSoC>/SDSoC/2015.4/settings64.sh
+
+        
+
