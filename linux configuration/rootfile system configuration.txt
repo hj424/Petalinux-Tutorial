@@ -1,4 +1,5 @@
 # Basic introduction about root file system configuration
+-- $ petalinux-config -c rootfs
 
 1. Filesystem packages
     1.1 base
