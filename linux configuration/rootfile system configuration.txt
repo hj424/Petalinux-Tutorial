@@ -55,5 +55,34 @@
         1.5.4 oprofile: a system-wide statistical profiling tool
         1.5.5 perl: a family of high-level, general-purpose, intepreted, dynamic programming languages
     1.6 doc: document for various modules
-    1.7 libs:
+    1.7 libs
+        1.7.1 db: s subset of the sybase db-library API 
+        1.7.2 expat: a stream oriented C library for parsing XML
+        1.7.3 gdbm: a simple database engine
+        1.7.4 gettext: to write multilingual programs on Unix-like computer systems
+        1.7.5 glib-2.0: a low-level libraries useful for providing data structure handling for C, portability wrappers and interfaces for such runtime functionality as an event loop, threads, dynamic loading and an object system
+        1.7.6 libnet: C library providing a high-level inerface to packet injection promitives across many platforms
+        1.7.7 libpng: the official png (portable network graphic) reference library
+        1.7.8 libusb-compat: replacement for libusb, more of a compatibility layer
+        1.7.9 libusb1: C library that provides generic access to USB devices
+        1.7.10 lzo: supports overlapping compression and in-place decompression
+        1.7.11 ncurses: providing an API that allows the programmer to write text-based user interfaces in a terminal-independent manner
+        1.7.12 popt: used by some programs to parse command line options
+        1.7.13 zlib: software library used for data compression
+    1.8 libs/network
+        1.8.1 libnl: a collection of libraries providing APIs to netlink protocol based linux kernel interfaces
+        1.8.2 libpcap: packet capture library (like wireshark)
+        1.8.3 openssl: open source project that provides a robust, commercial-grade, and full-featured toolkit for the Transport Layer Security (TLS) and Secure Sockets Layer (SSL) protocols
+    1.9 x11/base
+        1.9.1 libdrm: a user space library for accessing the DRM, direct rendering manager, on operating systems that supoort the ioctl interface
         
+ 2. Libs (blank)
+ 
+ 3. Apps: some build-in applications
+ 
+ 4. Module: build-in modules
+ 
+ 5. Petalinux rootfs settings
+    *** Automatically configured by Petalinux including password for root; busybox
+    
+ 6. Debugging: build debugable applications
