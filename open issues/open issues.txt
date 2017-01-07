@@ -1,1 +1,3 @@
-//
+1. program stuck
+2. user's permission: reboot, copy, etc.
+3. C compiler
