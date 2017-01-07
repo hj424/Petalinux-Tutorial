@@ -1,1 +1,37 @@
 # Basic introduction about root file system configuration
+
+1. Filesystem packages
+    1.1 base
+        1.1.1 base-files: build-in function
+        1.1.2 base-passwd: build-in function
+        1.1.3 busybox: single executable basic functions of more than 300 common commands
+            ***Enable functions you need in your system
+            ***Some necessay Internet settings are here, say DHCP client.
+        1.1.4 cryptodev-linux: cryptographic devices in linux
+        1.1.5 e2fsprogs: provide the filesystem utility for ext2
+        1.1.6 external-xilinx-toolchain: useful xilinx libraries
+            ***Say libstdc++6 for SDSoC
+        1.1.7 i2c-tools: I2C host controllers, connecting the kernel to I2C bus and SPI devices
+        1.1.8 init-ifupdown: the network interface manager for cululus linux
+        1.1.9 init-scripts: to start required processes as part of boot process
+        1.1.10 iprouter: a collection of userspace utilities for controlling and monitoring various aspects of networking in the linux kernel, including routing network interfaces, tunnels, traffic control and network related drivers
+        1.1.11 iptables: user space aplication program that allows a system administrator to configure the tables provided by linux kernel firewall
+        1.1.12 kmod: lodable kernel module, typically used to add support for new hardware as device drivers and/or filesystem, or for adding system calls. No longer required...
+        1.1.13 libaio1: library for asynchronuous I/O
+        1.1.14 libffi: provides a C programming laguage interface for calling natively coompiled functions given iniformation about the target function at run time instead of compile time
+        1.1.15 m4: GNU M4 macros
+        1.1.16 modutils-initscripts: initscript for auto-loading kernel modules on boot
+        1.1.17 mtd-utils: memory technology devices subsystem provides an abstraction layer for raw flash devices, i.e. generic interface between the hardware driver and upper layers of the system
+        1.1.18 net-snmp: simple network management protocol
+        1.1.19 net-tools: a collection of programs that form the base set of the NET-3 networking distribution for the linux operating system like ipaddr, aarp, etc.; obsolete now
+        1.1.20 netbase: basic TCP/IP networking system
+        1.1.21 opkg-utils: open package management
+        1.1.22 sysfsutils: sysfs ([srudo fiel system) that exports informatino about various kernel subsystems, hardware devices and associated device drivers from the kernel's device model to user space through virtual files.
+        1.1.23 sysvinit: system V initialization
+        1.1.24 sysvinit-inittab: start up configuration files
+        1.1.25 tcf-agent: target communication framework for the eclipse IDE
+        1.1.26 update-rc.d: manage symlinks in /etc/rcN.d
+        1.1.27 usbutils: host side USB console utilities
+        1.1.28 util-linux: a suite of basic system administration utilities    
+    1.2 base/shell: linux bash shell
+    1.3 console/network
