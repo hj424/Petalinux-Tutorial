@@ -16,9 +16,8 @@ The basic structure of this tutorial shows as following:
   2.2 rootfs configuration
   
   2.3 kernel configuration
-  
-  
-3. Linux system files: image.ub BOOT.bin rootfs.cpio
+   
+3. Linux system files: image.ub; BOOT.bin; rootfs.cpio;
 
 4. Open issues
 
