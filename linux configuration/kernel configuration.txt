@@ -1,1 +1,44 @@
 # Basic introduction of kernel configuration
+-- $ petalinux-config -c kernel
+
+1. Patch physical to virtual translations at runtime
+    ***Address transaltion
+
+2. General setup
+    2.1 cross-compiler tool prefix: find aross compiler tolls
+    2.2 compile also drivers which will not load - xilinx local version - qppend to the version string
+        ***Automatically configued by Petalinux
+    2.3 automatically append version infromation to the version string
+        ***Kernel compression mode (Gzip)
+    2.4 support for paging of anonyous memory: enable swap functioni
+    2.5 system V IPC
+    2.6 POSIX message queues: allow processes to exchange data in the form of messages
+    2.7 Enable process_vm_readv/writev syscalls: adds the system calls process_vm_readv and process_vm_writev which allow a process with the correct privileges to directly read from or write to to another process's address space
+    2.8 open by fhandle syscalls: enable track files using handles instead of names
+    2.9 uselib syscall: serves to load a shared library to be used by the calling process
+    2.10 Auditing support:
+        * IRQ, Timer, CPU/Task time and status accounting, RCU
+    2.11 Kernel .config support: able to modify the kernel configuration in .config file
+    2.12 Enable access to .config through /proc/config.gz
+    2.13 Kernel log buffer size: 16->64KB, 17->128KB
+    2.14 CPU kernel log buffer size contribution: 13->8KB, 17->28KB
+    2.15 control group support: the linux kernel feature that limits, accounts for, and isolates the resource usage (CPU, memory, disk I/O, network, etc.) of a collection of processes
+    2.16 checkpoint/restore support: add support to checkpoint and restore processes. Checkpointing processes can be used for fault tolerance and/or load balancing
+    2.17 namespace support: changes to the global resource are visible to other processes that are members of the namespace, but are invisible to other processes
+    2.18 automatic process group schduling
+    2.19 enable deprecated sysfs features to support old userspace tools: creates deprecated symlinks such as the "device"-link, the <subsystem>:<name>-link, and the "bus"-link. It may also add deprecated key in the uevent environment; obsolete now
+    2.20 kernel -> user space relay support: enables support for relay interface support in certain file systems (such as debugfs), designed to provide an efficient mechanism for tools and facilities to relay large amounts of data from kernel space to user space.
+    2.21 initial RAM filesystem and RAM disk (initramfs/initrd) support: enable a RAM disk that is loaded by the boot loader (loadlin or lilo) and that is mounted as root before the normal boot procedure as the "real" root file system
+    2.22 optimized for size: reduce  kernel size
+    2.23 configure standard kernel features (expert users): allows certain base kernel options and settings to be disabled or tweaked. This is for specialized environments which can tolerate a "non-standard" kernel. Please only use this if you really know what you are doing.
+    2.24 embedded system
+    2.25 kernel performance events and counters: enable kernel support for various performance events provided by software and hardware
+    2.26 enable VM event counters for /proc/vmstat: allows the disabling of the VM event counters on EXPERT systems. /proc/vmstat will only show page counts if VM event counters are disabled
+    2.27 disable heap randomization: changes the bootup default to heap randomization disabled, and can be overridden at runtime by setting /proc/sys/kernel/randomize_va_space to 2
+    2.28 choose SLAB allocator: linux memory allocator - SLAB, SLUB, SLOB
+    2.29 profiling support: enable the oprofile system
+    2.30 kprobes: allows users to trap nearly any kernel address to start a callback function (debugging tool)
+    2.31 optimized very unlikely/likely branches: makes branch prediction easier and reduces overhead
+    2.32 stack protector buffer overflow detection: none, regular, strong
+    2.33 GCOV-based kernel profiling: Using gcov one can find out some basic performance statistics on a per source file level such as:* how often each line of code executes; * what lines of code are actually executed; * how much computing time each section of code uses
+    
