@@ -1,1 +1,5 @@
 # Command lines for using Petalinux 
+-- Petalinux with differnet version has differernt functions. The commands we used are tested under Petaliux v.15.4. For the new commands in the latest Petalinux, please refer to the lastest user guide (ug1157)
+
+##### Commands for generating Linux kernel compatible with SDSoC under zc706 platform
+
