@@ -42,3 +42,95 @@
     2.32 stack protector buffer overflow detection: none, regular, strong
     2.33 GCOV-based kernel profiling: Using gcov one can find out some basic performance statistics on a per source file level such as:* how often each line of code executes; * what lines of code are actually executed; * how much computing time each section of code uses
     
+3. Enable loadable module support
+      * module functions, e.g. loading, uploading, versioning, checksum, etc.
+
+4. Enable the block layer
+      * block layer configuration, e.g. SG support, data integrity support, command line partition parser, etc.
+      
+5. System type
+      *** choose supported platform
+      
+6. Bus Support
+      * PCI support, e,g, stub driver, IOV support, PRI support, etc.
+      
+7. Kernel features
+      7.1 symmetric multi-processing (SMP): the processing of programs by multiple processors that share a common operating system and memory
+      7.2 allow booting SMP kernel on uniprocessor systems (experimental): SMP kernels contain instructions which fail on non-SMP processors. Enabling this option allows the kernel to modify itself to make these instructions safe. If you do not understand it, say Yes for this function
+      7.3 support cpu topology definition: support ARM cpu topology definition. The MPIDR register defines affinity between processors which is then used to describe the cpu topology of an ARM System
+      7.4 multi-core schdeler support
+      7.5 SMT scheduler support
+      7.6 architected timer support: provides up to 8 frames with a hysical and optional virtual timer per frame
+      7.7 multi-cluster power management: power-efficient scheduling
+      7.8 big.LITTLE support (experimental): heterogeneous computing architecture, coupling relatively battery-saving and slower processor cores (LITTLE) with relatively more powerful and power-hungry ones (big)
+      7.9 memory split (3G/1G user/kernel split)
+      7.10 maximum nember of CPUs (2-32)
+      7.11 support for hot-pluggable CPUs
+      7.12 support for the ARM power state coordination interface (PSCI): can be used by Linux to initiate various CPU-centric power operations
+      7.13 preemption model (preemtion kernel low-latency desktop): RTOS
+      7.14 Timer frequency
+      7.15 compile the kernel in Thumb-2 mode
+      7.16 use the ARM EABI to compile the kernel: only useful if you are using a user space environment that is also compiled with EABI
+      7.17 allow old ABI inaries to run with this kernel (experimental): provides a compatibility layer to intercept syscalls that have structure arguments which layout in memory differs between the legacy ABI and the new ARM EABI (only for non "thumb" binaries); but adds a tiny overhead to all syscalls and produces a slightly larger kernel
+      7.18 high memory support: linux kernel splits that up 3/1 (could also be 2/2, or 1/3 1) into user space (high memory) and kernel space (low memory) respectively
+      7.19 allocate 2nd-level page tables from high memory
+      7.20 enable hardware performance counter support for perf events: hardware support for perf events
+      7.21 sllow for memory compaction
+      7.22 page migration: page migration in multi-core system
+      7.23 enable bounce buffers: when data travels between a device and high memory, it is first copied through the bounce buffer
+      7.24 enable KSM for page merging: memory-saving de-duplication feature
+      7.25 low address space to protect from user allocation (4096)
+      7.26 enable cleancache driver to cache clean pages if temporary memory is present
+      7.27 enable front swap to cache swap pages if temporary memory is present
+      7.28 contiguous memory allocator: allocation of physically-contiguous memory buffer
+      7.29 CMA debug messages (development): produces KERN_DEBUG messages for every CMA call as well as various messages while processing calls such as dma_alloc_from_contiguous()
+      7.30 maximum count of the CMA areas (7)
+      7.31 common API for compressed memory storage: allows using either zbud or zsmalloc
+      7.32 low density storage for compressed pages: store up to two compressed pages per physical page
+      7.33 memory allocator for compressed pages: constrained memory allocation - zsmalloc
+      7.34 use kernel mem{cpy,set}() for {copy_to,clear}_user(): implement faster copy_to_user and clear_user methods for CPU cores where a 8-word STM instruction give significantly higher memory write throughput than a sequence of individual 32bit stores
+      7.35 enable section compression to safely compute untrusted bytecode:  using pipes or other transports made available to the process as file descriptors supporting the read/write syscalls
+      7.36 xen guest support on ARM: Xen on ARM architecture
+
+8. Boot options:
+      * boot settings, e.g. device tree support, kernel parameters, kexec system call, etc.
+    
+9. CPU power management
+      * power management settings
+ 
+10. Floating point emulation
+      * VFP-format; Advanced SIMD extention; NEON in kernel mode
+   
+11. User space binary formats
+      * .elf here
+      
+12. Power management support
+      * power efficiency, e.g. hibernation, sleep, wake up mechanism , etc.
+      
+13. Networking support
+
+14. Device drivers
+      *** select drivers you need in your design, e.g. MTD, Block devices, SPI, etc.
+      
+15. File systems
+      *** ext2, ext3, ext4, etc.
+      
+16. kernel hacking
+      * kernel debugging settings
+
+17. Security options
+      * security settings/modules
+     
+18. cryptographyic API
+
+19. library routines
+      * CRC checking, XZ decompression, compiled-in fonts
+      
+20. virtulization
+      * emulate the whole physical computer machine
+      
+    
+
+
+
+    
