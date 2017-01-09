@@ -1,4 +1,4 @@
-# Command lines for using Petalinux 
+a# Command lines for using Petalinux 
 -- Petalinux with differnet version has differernt functions. The commands we used are tested under Petaliux v.15.4. For the new commands in the latest Petalinux, please refer to the lastest user guide (ug1157)
 
 ##### Commands for generating Linux kernel compatible with SDSoC under ZC706 platform
@@ -80,7 +80,6 @@
       * Note: this step may take time
      
 6. For packaging your Linux kernel, SDSoC is required. So please source SDSoC like this:
-      source <directory of SDSoC>/SDSoC/2015.4/license.sh
       source <directory of SDSoC>/SDSoC/2015.4/settings64.sh
 
 7. Generating Boot loader
