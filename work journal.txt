@@ -1,5 +1,7 @@
 1. Petalinux stuck
   ... 0110
+  (1) replace u-boot.elf && fsbl.elf in the platform - petalinux
+  (2) booting processes
 
 
 2. SDSoC project - 3D image rendering
