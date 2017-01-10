@@ -1,0 +1,5 @@
+1. boot stuck in "ZYNQ OCM pool: 256 KiB @ 0xf0080000"
+    refer to this link: https://forums.xilinx.com/t5/Embedded-Linux/Zynq-7030-Petalinux-2015-4-kernel-boot-hang-at-zynq-ocm-f800c000/td-p/677075
+
+2. boot stuck in "[ end Kernel panic - not syncing: XXXXX"
+    make sure you check the AUTO config settings in $ petalinux-config
