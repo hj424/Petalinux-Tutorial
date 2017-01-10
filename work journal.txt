@@ -1,0 +1,9 @@
+1. Petalinux stuck
+  ...
+
+
+2. SDSoC project - 3D image rendering
+  (1) BRAM size limitation - 16384 - how to figure this out?
+      - 4 smaller arrays
+      - some settings/pragmas
+  (2) Build FIFO ini SDSoC
