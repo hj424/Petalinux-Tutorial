@@ -1,5 +1,5 @@
 1. Petalinux stuck
-  ...
+  ... 0110
 
 
 2. SDSoC project - 3D image rendering
