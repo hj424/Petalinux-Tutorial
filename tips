@@ -7,3 +7,6 @@
     touch /var/run/console/yourusername
     chmod +s /sbin/reboot
     chmod +s /sbin/halt
+3. automatically mount devices
+    e.g. /etc/fstab
+    /dev/mmcblk0p1  /mnt    ext3    defaults    1   2 (P236)
