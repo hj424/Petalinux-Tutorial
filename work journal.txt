@@ -7,3 +7,7 @@
       - 4 smaller arrays
       - some settings/pragmas
   (2) Build FIFO in SDSoC
+
+ug902
+#pragma AP interface ap_fifo port=data_i
+#pragma AP interface ap_fifo port=data_o
