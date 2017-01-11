@@ -13,5 +13,7 @@
 4. tar
     Compression: $ tar -jcv -f filename.tar.bz2 original files
     Decompression: $ tar -jxv filename.tar.bz2 -C objective directory
+5.  $ chown <group> <file>
+    $ chown :<group> <file>
  
 285
