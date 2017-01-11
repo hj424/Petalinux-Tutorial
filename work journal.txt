@@ -15,11 +15,22 @@ ug902
 #pragma AP interface ap_fifo port=data_o
 
 
-*#pragma SDS data_mover (not used normally)
-#pragma SDS data mem_attribute 
-  a. sds_alloc: contiguous
-  b. malloc: no-contiguous  
-#pragma SDS data zero_copy :arrange a shared memory used for both reading and writing.
+*#pragma SDS data_mover (This pragma is not recommended for normal use）
+
+#pragma SDS data mem_attribute(ArrayName:cache|contiguity) 
+cache must be either CACHEABLE or NON_CACHEABLE.
+The default value is set to be CACHEABLE.
+CACHEABLE means that the compiler must maintain cache coherency between the CPU and accelerator for the memory allocated to the array. 
+NON-CACHEABLE means that the compiler does not need to ensure the cache coherency of the specified memory
+Software code does not read or write the video data so the cache coherency between processor and accelerator is not required. 
+Continuity must be either PHYSICAL_CONTIGUOUS or NON_PHYSICAL_CONTIGUOUS
+The default value is set to be NON_PHYSICAL_CONTIGUOUS
+PHYSICAL_CONTIGUOUS means that all memory corresponding to the associated ArrayName is allocated using sds_alloc, while NON_PHYSICAL_CONTIGUOUS means that all memory corresponding to the associated ArrayName is allocated using malloc. 
+
+#pragma SDS data copy|zero_copy(ArrayName[offset:length])
+The data copy implies that data is explicitly copied from the processor memory to the hardware function. 
+The data zero_copy means that the hardware function accesses the data directly from shared memory. 
+
 #pragma SDS data access_pattern(arguement : SEQUENTIAL | RANDOM)
 we use sequential to allocate FIFO interface and use RANDOM to allocate BRAM interface.
 *#pragma SDS buffer_depth
