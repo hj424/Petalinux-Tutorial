@@ -13,3 +13,15 @@
 ug902
 #pragma AP interface ap_fifo port=data_i
 #pragma AP interface ap_fifo port=data_o
+
+
+*#pragma SDS data_mover (not used normally)
+#pragma SDS data mem_attribute 
+  a. sds_alloc: contiguous
+  b. malloc: no-contiguous  
+#pragma SDS data zero_copy :arrange a shared memory used for both reading and writing.
+#pragma SDS data access_pattern(arguement : SEQUENTIAL | RANDOM)
+we use sequential to allocate FIFO interface and use RANDOM to allocate BRAM interface.
+*#pragma SDS buffer_depth
+*#pragma SDS async
+*#pragma SDS wait
