@@ -36,3 +36,5 @@ we use sequential to allocate FIFO interface and use RANDOM to allocate BRAM int
 local memory: for a single function
 shared memory: for several functions 
 global memory: for all
+
+arguements data type of hardware function: 8,16,32,64bit 
