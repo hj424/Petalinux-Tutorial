@@ -15,17 +15,19 @@ ug902
 #pragma AP interface ap_fifo port=data_o
 
 
-*#pragma SDS data_mover (This pragma is not recommended for normal use）
+*#pragma SDS data_mover(ArrayName:DataMover)
+(This pragma is not recommended for normal use）
 
 #pragma SDS data mem_attribute(ArrayName:cache|contiguity) 
-cache must be either CACHEABLE or NON_CACHEABLE.
-The default value is set to be CACHEABLE.
-CACHEABLE means that the compiler must maintain cache coherency between the CPU and accelerator for the memory allocated to the array. 
-NON-CACHEABLE means that the compiler does not need to ensure the cache coherency of the specified memory
+cache : CACHEABLE or NON_CACHEABLE.
+default : CACHEABLE.
+CACHEABLE means that the compiler must maintain cache coherency between the CPU and accelerator.
+NON-CACHEABLE means that the compiler does not need to ensure the cache coherency of the specified memory.
 Software code does not read or write the video data so the cache coherency between processor and accelerator is not required. 
-Continuity must be either PHYSICAL_CONTIGUOUS or NON_PHYSICAL_CONTIGUOUS
-The default value is set to be NON_PHYSICAL_CONTIGUOUS
-PHYSICAL_CONTIGUOUS means that all memory corresponding to the associated ArrayName is allocated using sds_alloc, while NON_PHYSICAL_CONTIGUOUS means that all memory corresponding to the associated ArrayName is allocated using malloc. 
+Continuity : PHYSICAL_CONTIGUOUS or NON_PHYSICAL_CONTIGUOUS
+default : NON_PHYSICAL_CONTIGUOUS
+PHYSICAL_CONTIGUOUS means that memory is allocated using sds_alloc.
+NON_PHYSICAL_CONTIGUOUS means that memory is allocated using malloc. 
 
 #pragma SDS data copy|zero_copy(ArrayName[offset:length])
 The data copy implies that data is explicitly copied from the processor memory to the hardware function. 
@@ -33,13 +35,14 @@ The data zero_copy means that the hardware function accesses the data directly f
 
 #pragma SDS data access_pattern(arguement : SEQUENTIAL | RANDOM)
 we use sequential to allocate FIFO interface and use RANDOM to allocate BRAM interface.
-*#pragma SDS buffer_depth
-*#pragma SDS async
-*#pragma SDS wait
+
+*#pragma SDS buffer_depth(ArrayName:BufferDepth)
+*#pragma SDS async(ID)
+*#pragma SDS wait(ID)
 
 #pragma HLS INLINE
-#pragma HLS PIPELINE II=
-#pragma HLS unroll factor=
+#pragma HLS PIPELINE II=1
+#pragma HLS unroll factor=2
 #pragma HLS AP 
 #pragma HLS dataflow
 #pragma HLS array_shape
