@@ -38,3 +38,11 @@ shared memory: for several functions
 global memory: for all
 
 arguements data type of hardware function: 8,16,32,64bit 
+
+sds_alloc(size_t size); // guarantees physically contiguous memory
+sds_mmap(void *paddr, size_t size, void *vaddr); // paddr must point to
+contiguous memory
+sds_register_dmabuf(void *vaddr, int fd); // assumes physically contiguous
+memory
+
+
