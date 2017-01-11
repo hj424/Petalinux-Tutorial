@@ -25,3 +25,10 @@ we use sequential to allocate FIFO interface and use RANDOM to allocate BRAM int
 *#pragma SDS buffer_depth
 *#pragma SDS async
 *#pragma SDS wait
+
+#pragma HLS INLINE
+#pragma HLS PIPELINE II=
+#pragma HLS unroll factor=
+#pragma HLS AP 
+#pragma HLS dataflow
+#pragma HLS array_shape
