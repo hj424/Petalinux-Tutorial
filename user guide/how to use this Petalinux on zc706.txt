@@ -1,1 +1,32 @@
-dsff
+1. Modify login settings
+  $ vi ~/.ssh/config
+  Add the following piece of code in it:
+  ////////////////////////////////////////
+      Host zhang-zc706-02.ece.cornell.edu
+        StrictHostKeyChecking no
+        UserKnownHostsFile=/dev/bull
+        LogLevel QUIET
+      Host zhang-zc706-01.ece.cornell.edu
+        StrictHostKeyChecking no
+      UserKnownHostsFile=/dev/bull
+      LogLevel QUIET
+   /////////////////////////////////////////    
+   $ chmod 600 ~/.ssh/config
+
+2. Copy the .elf file into the board by:
+    $ scp XXX.elf <user account>@zhang-zc706-01-ece.cornell.edu:~    or
+    $ scp XXX.elf <user account>@zhang-zc706-02-ece.cornell.edu:~ 
+
+3. Login with your user account and password
+    * you can modify your password by type "passwd" in the command line
+    
+4. Get the root permission to execute your .elf
+    $ chmod 744 XXX.elf
+    $ su root  || root password: XXXX
+    $ ./XXX.elf
+    
+5. Please exit the root account after running program
+    $ exit
+    *** you can use "whoami" to check the account
+ 
+    
