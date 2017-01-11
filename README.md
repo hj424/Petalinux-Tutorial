@@ -13,5 +13,6 @@ The basic structure of this tutorial shows as following:
   1. General configuration 
   2. Rootfs configuration  
   3. Kernel configuration
-3. Linux system files: image.ub; BOOT.bin; rootfs.cpio;
-4. Open issues
+3. Linux system files
+4. User Guide - How to use this Petalinux
+5. Open issues
