@@ -27,8 +27,8 @@ With this customized Linux system build by Petalinux, you can execute your appli
    $ chmod 600 ~/.ssh/config
 
 2. Copy the .elf and BOOT.bin file into the board by:
-    $ scp XXX.elf/BOOT.bin <user account>@zhang-zc706-01-ece.cornell.edu:~    or
-    $ scp XXX.elf/BOOT.bin <user account>@zhang-zc706-02-ece.cornell.edu:~ 
+    $ scp XXX.elf/BOOT.bin <user account>@zhang-zc706-01-ece.cornell.edu:/mnt    or
+    $ scp XXX.elf/BOOT.bin <user account>@zhang-zc706-02-ece.cornell.edu:/mnt 
 
 3. Login with your user account and password
     * you can modify your password by type "passwd" in the command line
@@ -42,5 +42,8 @@ With this customized Linux system build by Petalinux, you can execute your appli
 5. Please exit the root account after running program
     $ exit
     *** you can use "whoami" to check the account
+    
+    
+   to be modified...
  
     
