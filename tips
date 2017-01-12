@@ -9,7 +9,7 @@
     chmod +s /sbin/halt
 3. automatically mount devices
     e.g. /etc/fstab
-    /dev/mmcblk0p1  /mnt    ext3    defaults    1   2 (P236)
+    /dev/mmcblk0p1  /mnt    auto    defaults,sync,noauto    0   0 (P236)
 4. tar
     Compression: $ tar -jcv -f filename.tar.bz2 original files
     Decompression: $ tar -jxv filename.tar.bz2 -C objective directory
