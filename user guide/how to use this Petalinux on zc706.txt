@@ -34,6 +34,7 @@ With this customized Linux system build by Petalinux, you can execute your appli
     * you can modify your password by type "passwd" in the command line
     
 4. Get the root permission to execute your .elf
+    $ reboot the system to configure the PL
     $ chmod 744 XXX.elf
     $ su root  || root password: XXXX
     $ ./XXX.elf             
