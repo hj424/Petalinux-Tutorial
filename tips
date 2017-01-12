@@ -7,6 +7,10 @@
     touch /var/run/console/yourusername
     chmod +s /sbin/reboot
     chmod +s /sbin/halt
+    
+    #enable suid
+    chmod +s /bin/su
+    
 3. automatically mount devices
     e.g. /etc/fstab
     /dev/mmcblk0p1  /mnt    auto    defaults,sync,noauto    0   0 (P236)
