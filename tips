@@ -17,3 +17,9 @@
     $ chown :<group> <file>
  
 285
+
+6. adduser:
+    /etc/passwd
+    /etc/shadow
+    /etc/group
+    /home
