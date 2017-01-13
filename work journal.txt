@@ -54,6 +54,7 @@ global memory: for all
 arguements data type of hardware function: 8,16,32,64bit 
 
 how to use contiguous memory:
+The sdscc/sds++ compilers analyze your program and selects data movers to match the requirements for each hardware function call between software and hardware, based on payload size, hardware interface on the accelerator, and properties of the function arguments. When the compiler can guarantee an array argument is located in physically contiguous memory, it can use the most efficient data movers. Allocating or memory-mapping arrays with the following sds_lib library functions can inform the compiler that memory is physically contiguous. 
 sds_alloc(size_t size); // guarantees physically contiguous memory
 sds_mmap(void *paddr, size_t size, void *vaddr); // paddr must point to
 contiguous memory
