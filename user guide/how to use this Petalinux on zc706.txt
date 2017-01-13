@@ -17,11 +17,11 @@ With this customized Linux system build by Petalinux, you can execute your appli
   ////////////////////////////////////////
       Host zhang-zc706-02.ece.cornell.edu
         StrictHostKeyChecking no
-        UserKnownHostsFile=/dev/bull
+        UserKnownHostsFile=/dev/null
         LogLevel QUIET
       Host zhang-zc706-01.ece.cornell.edu
         StrictHostKeyChecking no
-      UserKnownHostsFile=/dev/bull
+      UserKnownHostsFile=/dev/null
       LogLevel QUIET
    /////////////////////////////////////////    
    $ chmod 600 ~/.ssh/config
