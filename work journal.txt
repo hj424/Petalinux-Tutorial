@@ -10,6 +10,7 @@
       - some settings/pragmas
   (2) Build FIFO in SDSoC
 
+pass by reference 
 
 *#pragma SDS data_mover(ArrayName:DataMover)
 (This pragma is not recommended for normal use）
