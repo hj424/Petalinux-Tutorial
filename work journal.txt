@@ -32,6 +32,7 @@ NON_PHYSICAL_CONTIGUOUS means that memory is allocated using malloc.
 #pragma SDS data copy|zero_copy(ArrayName[offset:length])
 The data copy implies that data is explicitly copied from the processor memory to the hardware function. 
 The data zero_copy means that the hardware function accesses the data directly from shared memory. 
+Within a synthesizeable hardware function, it is usually inefficient to read/write single words from the shared memory (specified using the zero-copy pragma). A more efficient approach is to employ memcpy to read/write data from memory in bursts and store it in a local memory
 
 #pragma SDS data access_pattern(arguement : SEQUENTIAL | RANDOM)
 we use sequential to allocate FIFO interface and use RANDOM to allocate BRAM interface.
