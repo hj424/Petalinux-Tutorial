@@ -23,6 +23,7 @@
 285
 
 6. adduser:
+    $ adduser -G kmem hj424
     /etc/passwd
     /etc/shadow
     /etc/group
