@@ -75,3 +75,5 @@ mem_attribute physically contiguous memory
 
 SDSOC includes: a. macro-architechture(vivado HLS)
                 b. data mover level(system level, data flow, #pragma SDS)
+                
+Pointer arguments for a hardware function require special consideration.
