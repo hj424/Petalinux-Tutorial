@@ -27,3 +27,6 @@
     /etc/shadow
     /etc/group
     /home
+    
+    
+ 7. chmod 744 /
