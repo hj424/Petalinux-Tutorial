@@ -83,3 +83,6 @@ A top-level hardware function should not contain any HLS interface pragmas. In t
 3. Avoid using arrays of struct. An array of struct has different memory layout between ARM GCC and Vivado HLS. In the future, the SDSoC environment will support array of struct with a compatible memory layout between ARM GCC and Vivado HLS. 4. Avoid usingap_int<>, ap_fixed<>, hls::stream, except with data width of 8, 16, 32 or 64 bits. Navigate to <SDSoC Installation Path>/samples/hls_if/hls_stream for a sample design on how to use hls::stream in the SDSoC environment.
 
  Data transport using a DMA data mover requires AXI4-Stream TLAST, TKEEP side band signals, which must be explicitly coded within HLS code.
+
+NOTE: To use the library, #include "sds_lib.h" in source files. You must include stdlib.h before including sds_lib.h to provide the size_t type declaration. 
+void *sds_alloc(size_t size) Allocate a physically contiguous array of size bytes. 
