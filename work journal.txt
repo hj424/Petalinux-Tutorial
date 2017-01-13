@@ -77,3 +77,5 @@ SDSOC includes: a. macro-architechture(vivado HLS)
                 b. data mover level(system level, data flow, #pragma SDS)
                 
 Pointer arguments for a hardware function require special consideration.
+
+ You must use sds_alloc to allocate an array for the following two cases: 1. You are using zero-copy pragma for the array. 2. You are using pragmas to explicitly direct the system compiler to use Simple-DMA or 2D-DMA. Note that in order to use sds_alloc() from sds_lib.h, it is necessary to include stdlib.h before including sds_lib.h. stdlib.h is included to provide the size_t type.
