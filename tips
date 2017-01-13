@@ -31,3 +31,5 @@
     
     
  7. chmod 755 /
+ 
+ chmod 770 second user cannot login: segfault!?
