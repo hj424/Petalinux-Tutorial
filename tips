@@ -29,4 +29,4 @@
     /home
     
     
- 7. chmod 744 /
+ 7. chmod 755 /
