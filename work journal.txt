@@ -10,10 +10,6 @@
       - some settings/pragmas
   (2) Build FIFO in SDSoC
 
-ug902
-#pragma AP interface ap_fifo port=data_i
-#pragma AP interface ap_fifo port=data_o
-
 
 *#pragma SDS data_mover(ArrayName:DataMover)
 (This pragma is not recommended for normal use）
