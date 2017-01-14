@@ -39,6 +39,6 @@
 //============================================================
 // Part 2: SDSoC
 //============================================================
-1. build - SDRelease - best runtime performance ???
+1. build - SDRelease - best runtime performance (reason: -O3)
 
 2. hardware interface type ug1027 Chapter 6: A programmer's guide to Vivado HLS - P43
