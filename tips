@@ -1,5 +1,7 @@
 //tips
-
+//============================================================
+// Part 1: Linux / Petalinux
+//============================================================
 1. edit path
     export PATH=$PATH:/bin
 2. provide permission for some appication
@@ -33,3 +35,8 @@
  7. chmod 755 /
  
  chmod 770 second user cannot login: segfault!?
+ 
+//============================================================
+// Part 2: SDSoC
+//============================================================
+1. build - SDRelease - best runtime performance ???
