@@ -1,4 +1,4 @@
-# Description of these Linux kernels
+# Description of these files
 
 -> uImage: linux kernel
 -> devicetree.dtb: linux devie tree
