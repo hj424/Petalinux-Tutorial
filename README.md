@@ -9,7 +9,7 @@ In this version, we build a Linux kernel using Petalinux (v.2015.4) and .hdf (ha
 The basic structure of this tutorial shows as following:
 
 1. commands - including some general commands of Petalinux and the specific configuration for our design
-2. config - details about Linux configuration
+2. configs - details about Linux configuration
   1. General configuration 
   2. Kernel configuration
   3. Root file system configuration   
