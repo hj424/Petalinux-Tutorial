@@ -16,9 +16,10 @@
 3. automatically mount devices
     e.g. /etc/fstab
     /dev/mmcblk0p1  /mnt    auto    defaults,sync,noauto    0   0 (P236)
-4. tar
-    Compression: $ tar -jcv -f filename.tar.bz2 original files
-    Decompression: $ tar -jxv filename.tar.bz2 -C objective directory
+4. tar - extract files
+    tar -xvzf filename.tar.gz
+    tar -vxjf filename.tar.bz2
+    
 5.  $ chown <group> <file>
     $ chown :<group> <file>
  
