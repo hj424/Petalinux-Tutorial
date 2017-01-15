@@ -1,3 +1,4 @@
+# some open issues in our work, this file will be deleted later...
 1. Petalinux stuck
   ... 0110
   (1) replace u-boot.elf && fsbl.elf in the platform - petalinux
