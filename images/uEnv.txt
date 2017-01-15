@@ -1,2 +1,2 @@
-ethaddr=00:0A:35:03:1B:B9
+ethaddr=00:0A:35:XX:XX:XX
 
