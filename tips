@@ -21,6 +21,9 @@
     tar -vxjf filename.tar.bz2
     tar -J -xvf filename.tar.xz
     
+5. chmod +x filename.sh
+   sh ./filename.sh 
+    
 5.  $ chown <group> <file>
     $ chown :<group> <file>
  
