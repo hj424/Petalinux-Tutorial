@@ -14,3 +14,7 @@ The basic structure of this tutorial shows as following:
   2. Kernel configuration
   3. Root file system configuration   
 3. images - files of linux system, including kernel, device tree, rootfs, etc.
+-> uImage: linux kernel
+-> devicetree.dtb: linux devie tree
+-> uramdisk.image: linux root file system
+-> uEnv: file to configure the MAC address
