@@ -10,11 +10,11 @@ The basic structure of this tutorial shows as following:
 
 1. commands - including some general commands of Petalinux and the specific configuration for our design
 2. configs - details about Linux configuration
-  1. General configuration 
-  2. Kernel configuration
-  3. Root file system configuration   
-3. images - files of linux system, including kernel, device tree, rootfs, etc.
-  1.uImage: linux kernel
-  2.devicetree.dtb: linux devie tree
-  3.uramdisk.image: linux root file system
-  4.uEnv: file to configure the MAC address
+  1. general configuration 
+  2. kernel configuration
+  3. root file system configuration   
+3. images
+  1. uImage: linux kernel 
+  2. devicetree.dtb: linux devie tree
+  3. uramdisk.image: linux root file system
+  4. uEnv: file to configure the MAC address
