@@ -17,7 +17,7 @@
     e.g. /etc/fstab
     /dev/mmcblk0p1  /mnt    auto    defaults,sync,noauto    0   0 (P236)
 4. tar - extract files
-    tar -xvzf filename.tar.gz
+    tar -xvzf filename.tar.gz (.tgz)
     tar -vxjf filename.tar.bz2
     tar -J -xvf filename.tar.xz
     
