@@ -27,6 +27,9 @@
 6. configure: error: no acceptable ld found in $PATH
     $ $ld
     $ export LD=ld
+    
+7. error: could not determine ar interface
+   
  
 5. chmod +x filename.sh
    sh ./filename.sh 
