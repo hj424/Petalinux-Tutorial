@@ -58,3 +58,27 @@
 
 2. hardware interface type ug1027 Chapter 6: A programmer's guide to Vivado HLS - P43
 AXI: Advanced eXtensible Interface
+
+SDSoC pragmas for building hardware & software interface
+(1) #pragma SDS data data_mover(arg:dm)
+    dm: AXIDMA_SG, AXIDMA_SIMPLE, AXIDMA_2D, or AXI_FIFO; arg: array name
+(2) #pragma SDS data sys_port(arg:port)
+    port: ACP or AFI; arg: array name    
+    ACP: Processor and Hardware function access the same fast cache memory as shared memory. Hardware guarantee!
+    AFI: Driver must flush cache to DDR before Hardware function can read the data from DDR. Software - programmer's work!
+// In general, SDSoC compiler will automatically choose data mover type and system port by the memory contiguity and array size
+// There are several general method to specify the memory contiguity and array size
+(1) Most intuitive one:
+    a. #pragma SDS data mem_attribute(arg:contiguity|cache)
+    contiguity: PHYSICAL_CONTIGUOUS or NON_PHYSICAL_CONTIGUOUS; cache: CACHEABLE or NON_CACHEABLE.
+    b. #pragma SDS data copy(arg[offset:size])
+    arg: array name; offset: 0 in common; size: array size
+(2) SDSoC memory allocation: sds_alloc(size_t size); // guarantees physically contiguous memory
+    different with malloc in C
+(3) Special shared memory access: zero copy
+    #pragma SDS data zero_copy(A[0:<array_size>]) // array_size = number of elements
+    Contiguous physical memory required
+//// Finally, it is better to choose the apporpriate data access pattern
+*** #pragma SDS data access_pattern(arg:pattern)
+    arg: array name; pattern: SEQUENTIAL or RANDOM. (RANDOM is the default setting.)
+    SEQUENTIAL: data streaming; RANDOM: data random access, must waiting for the finishing of all data's tramssion!
