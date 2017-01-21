@@ -66,8 +66,8 @@ SDSoC pragmas for building hardware & software interface
     port: ACP or AFI; arg: array name    
     ACP: Processor and Hardware function access the same fast cache memory as shared memory. Hardware guarantee!
     AFI: Driver must flush cache to DDR before Hardware function can read the data from DDR. Software - programmer's work!
-// In general, SDSoC compiler will automatically choose data mover type and system port by the memory contiguity and array size
-// There are several general method to specify the memory contiguity and array size
+// In general, SDSoC compiler will automatically choose data mover type and system port by the "memory contiguity" and "array size"
+// There are several general methods to specify the memory contiguity and array size
 (1) Most intuitive one:
     a. #pragma SDS data mem_attribute(arg:contiguity|cache)
     contiguity: PHYSICAL_CONTIGUOUS or NON_PHYSICAL_CONTIGUOUS; cache: CACHEABLE or NON_CACHEABLE.
