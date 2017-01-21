@@ -16,10 +16,12 @@
 3. automatically mount devices
     e.g. /etc/fstab
     /dev/mmcblk0p1  /mnt    auto    defaults,sync,noauto    0   0 (P236)
-4. tar - extract files
+4. (1) tar - extract files
     tar -xvzf filename.tar.gz (.tgz)
     tar -vxjf filename.tar.bz2
     tar -J -xvf filename.tar.xz
+   (2) tar - compress files
+    tar czf name_of_archive_file.tar.gz name_of_directory_to_tar
     
 5. change date and time
     date -s "2017-01-17 16:50:00"
