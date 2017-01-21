@@ -75,7 +75,7 @@ SDSoC pragmas for building hardware & software interface
     arg: array name; offset: 0 in common; size: array size
 (2) SDSoC memory allocation: sds_alloc(size_t size); // guarantees physically contiguous memory
     different with malloc in C
-(3) Special shared memory access: zero copy
+(3) Special shared memory access: zero copy  (memcpy??????)
     #pragma SDS data zero_copy(A[0:<array_size>]) // array_size = number of elements
     Contiguous physical memory required
 //// Finally, it is better to choose the apporpriate data access pattern
