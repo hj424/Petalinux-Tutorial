@@ -1,5 +1,5 @@
 # Petalinux-Tutorial
--- Use Petalinux (v.2015.4) to build a customized Linux kernel for Xilinx ZC706 which is compatible with SDSoC
+-- Use Petalinux (v.2015.4) to build a customized Linux system for Xilinx ZC706 which is compatible with SDSoC
 
 ##### Authors : Baohui Wang (bhwang@tju.edu.cn); Hanchen Jin (hj424@cornell.edu)
 ##### Date    : Jan. 5, 2017
