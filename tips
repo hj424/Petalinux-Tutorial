@@ -84,3 +84,11 @@ SDSoC pragmas for building hardware & software interface
 *** #pragma SDS data access_pattern(arg:pattern)
     arg: array name; pattern: SEQUENTIAL or RANDOM. (RANDOM is the default setting.)
     SEQUENTIAL: data streaming; RANDOM: data random access, must waiting for the finishing of all data's tramssion!
+    
+    
+///////////////////////////////////////////////////////////////////////////////////////////
+SDSoC Error: can not find function body...
+(1) directly include the corresponding header file
+(2) delete the hardware function & run the software code, then add the hardware module and run it again
+(3) restart SDSoC
+(4) delete this project and build a new one...
