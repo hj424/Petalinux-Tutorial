@@ -19,6 +19,8 @@ for pointer: we can use
 and #pragma SDS data copy(p[0:<array_size>]) // for example, int *p
 we can vary the array size in the second line, use some scalar arguments.
 
+C:zero_copy and physically contigous memory
+
 
 
 
