@@ -11,6 +11,16 @@
       - some settings/pragmas
   (2) Build FIFO in SDSoC
 
+
+the meaning of zero_copy:
+we dont copy any data to hardware function.The HW read and write data from external DDR memory as need. So zero_copy means the allocation of shared memory.
+
+
+
+
+
+
+
 pass by reference 
 
 *#pragma SDS data_mover(ArrayName:DataMover)
