@@ -108,3 +108,7 @@ a# Command lines for using Petalinux
       (1) Set boot mode to SD - DIP switch SW11 positions 3 and 4 set to 1
       (2) Connect the serial port on the board (UART)
             e.g. Tera Term with Baud rate 115200 (details in ug963: setting up board communications)
+            
+            
+            
+/home/hanchen/Downloads/petalinux-v2015.4-final/         
