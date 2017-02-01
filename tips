@@ -4,7 +4,13 @@
 //============================================================
 1. edit path
     export PATH=$PATH:/bin
-2. provide permission for some appication
+	
+2. lsattr: extra attributes
+chattr +a : can only add data to this file
+chattr +i : can not read, delete, add data to this file
+	
+	
+3. provide permission for some appication - SUID
     mkdir /var/run/console
     touch /var/run/console/yourusername
     chmod +s /sbin/reboot
@@ -12,6 +18,21 @@
     
     #enable suid
     chmod +s /bin/su
+	
+4. login welcome interface
+	(1) before login
+	$ vi /etc/issue
+	/////////////////////////////////////////////
+	// Welcome to use Xilinx ZC706!
+	// Date: \d \t
+	// Kernel: \r on an \m
+	////////////////////////////////////////////
+	(2) after login
+	$ vi /etc/motd
+	
+5. login bash - PATH; MAIL; USER; HISTSIZE
+	$ vi /etc/profile  # all users
+	$ vi ~/.profile    # user's own profile
     
 3. automatically mount devices
     e.g. /etc/fstab
