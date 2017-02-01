@@ -59,8 +59,6 @@ chattr +i : can not read, delete, add data to this file
     
 5.  $ chown <group> <file>
     $ chown :<group> <file>
- 
-285
 
 6. adduser:
     $ adduser -G kmem hj424
@@ -73,6 +71,9 @@ chattr +i : can not read, delete, add data to this file
  7. chmod 755 /
  
  chmod 770 second user cannot login: segfault!?
+ 
+ Modify color of echoed INFOs in command line
+ http://webhome.csc.uvic.ca/~sae/seng265/fall04/tips/s265s047-tips/bash-using-colors.html
  
 //============================================================
 // Part 2: SDSoC
