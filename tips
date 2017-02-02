@@ -67,7 +67,7 @@ chattr +i : can not read, delete, add data to this file
     $ chown :<group> <file>
 
 6. adduser:
-    $ adduser -G kmem hj424
+    $ adduser -G root hj424  //add user to a exist group
     /etc/passwd
     /etc/shadow
     /etc/group
