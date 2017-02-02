@@ -29,6 +29,12 @@ chattr +i : can not read, delete, add data to this file
 	////////////////////////////////////////////
 	(2) after login
 	$ vi /etc/motd
+	////////////////////////////////////////////////////////////////////////////
+	// Welcome to Xilinx ZC706! ^_^
+	// Build with Petalinux v2015.4(yocto 1.8)
+	// Kernel: 4.0.0-xilinx on armv7l
+	///////////////////////////////////////////////////////////////////////////
+
 	
 5. login bash - PATH; MAIL; USER; HISTSIZE
 	$ vi /etc/profile  # all users
