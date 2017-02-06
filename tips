@@ -46,33 +46,33 @@ chattr +i : can not write, delete, add data to this file
 	$ export TMOUT=300 # 5 minutes
 	$ vi ~/.profile    # user's own profile
     
-3. automatically mount devices
+6. automatically mount devices
     e.g. /etc/fstab
     /dev/mmcblk0p1  /mnt    auto    defaults,sync,noauto    0   0 (P236)
-4. (1) tar - extract files
+7. (1) tar - extract files
     tar -xvzf filename.tar.gz (.tgz)
     tar -vxjf filename.tar.bz2
     tar -J -xvf filename.tar.xz
    (2) tar - compress files
     tar czf name_of_archive_file.tar.gz name_of_directory_to_tar
     
-5. change date and time
+8. change date and time
     date -s "2017-01-17 16:50:00"
  
-6. configure: error: no acceptable ld found in $PATH
+9. configure: error: no acceptable ld found in $PATH
     $ $ld
     $ export LD=ld
     
-7. error: could not determine ar interface
+10. error: could not determine ar interface
    
  
-5. chmod +x filename.sh
+11. chmod +x filename.sh
    sh ./filename.sh 
     
-5.  $ chown <group> <file>
+12.  $ chown <group> <file>
     $ chown :<group> <file>
 
-6. adduser:
+13. adduser:
     $ adduser -G root hj424  //add user to a exist group
     /etc/passwd
     /etc/shadow
@@ -80,12 +80,16 @@ chattr +i : can not write, delete, add data to this file
     /home
     
     
- 7. chmod 755 /
+ 14. chmod 755 /
  
  chmod 770 second user cannot login: segfault!?
  
- Modify color of echoed INFOs in command line
+ 15.Modify color of echoed INFOs in command line
  http://webhome.csc.uvic.ca/~sae/seng265/fall04/tips/s265s047-tips/bash-using-colors.html
+ 
+ 16. debug shell script
+ $ sh -n XXX.sh # detect errors in grammar
+ $ sh -x XXX.sh # print commands in shell script before execute it
  
 //============================================================
 // Part 2: SDSoC
