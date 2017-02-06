@@ -7,7 +7,7 @@
 	
 2. lsattr: extra attributes
 chattr +a : can only add data to this file
-chattr +i : can not read, delete, add data to this file
+chattr +i : can not write, delete, add data to this file
 	
 	
 3. provide permission for some appication - SUID
@@ -16,7 +16,7 @@ chattr +i : can not read, delete, add data to this file
     chmod +s /sbin/reboot
     chmod +s /sbin/halt
     
-    #enable suid
+    #enable suid - solve the problem: must be suid to work properly
     chmod +s /bin/su
 	
 4. login welcome interface
