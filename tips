@@ -91,6 +91,11 @@ chattr +i : can not write, delete, add data to this file
  $ sh -n XXX.sh # detect errors in grammar
  $ sh -x XXX.sh # print commands in shell script before execute it
  
+ 17. change MAC address after boot up
+/etc/init.d/networking stop
+ifconfig eth0 hw ether 00:0A:35:03:1B:B9
+/etc/init.d/networking start
+ 
 //============================================================
 // Part 2: SDSoC
 //============================================================
