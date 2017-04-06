@@ -1,0 +1,178 @@
+
+datacfg:cfg/coco.data
+layer     filters    size              input                output
+    0 conv     16  3 x 3 / 1   416 x 416 x   3   ->   416 x 416 x  16
+    1 max          2 x 2 / 2   416 x 416 x  16   ->   208 x 208 x  16
+    2 conv     32  3 x 3 / 1   208 x 208 x  16   ->   208 x 208 x  32
+    3 max          2 x 2 / 2   208 x 208 x  32   ->   104 x 104 x  32
+    4 conv     64  3 x 3 / 1   104 x 104 x  32   ->   104 x 104 x  64
+    5 max          2 x 2 / 2   104 x 104 x  64   ->    52 x  52 x  64
+    6 conv    128  3 x 3 / 1    52 x  52 x  64   ->    52 x  52 x 128
+    7 max          2 x 2 / 2    52 x  52 x 128   ->    26 x  26 x 128
+    8 conv    256  3 x 3 / 1    26 x  26 x 128   ->    26 x  26 x 256
+    9 max          2 x 2 / 2    26 x  26 x 256   ->    13 x  13 x 256
+   10 conv    512  3 x 3 / 1    13 x  13 x 256   ->    13 x  13 x 512
+   11 max          2 x 2 / 1    13 x  13 x 512   ->    13 x  13 x 512
+   12 conv   1024  3 x 3 / 1    13 x  13 x 512   ->    13 x  13 x1024
+   13 conv   1024  3 x 3 / 1    13 x  13 x1024   ->    13 x  13 x1024
+   14 conv    425  1 x 1 / 1    13 x  13 x1024   ->    13 x  13 x 425
+   15 detection
+Loading weights from tiny-yolo.weights...Done!
+Start prediction...
+network_predict.
+forward_network.
+predicting: layer NO. 0.
+l.delta
+scale_cpu           :      1 calls;  13.794 msecs total time
+-----------------------------------------------
+activate            :      1 calls;  55.969 msecs total time
+add_bias            :      1 calls;  27.568 msecs total time
+batch_norm          :      1 calls;  80.811 msecs total time
+col2img             :      1 calls; 171.663 msecs total time
+gemm                :      1 calls; 103.595 msecs total time
+im2col              :      1 calls;  23.598 msecs total time
+part left           :      1 calls;  94.001 msecs total time
+fill_cpu            :      1 calls;  13.929 msecs total time
+the whole layer     :      1 calls; 595.585 msecs total time
+predicting: layer NO. 1.
+l.delta
+scale_cpu           :      1 calls;   3.406 msecs total time
+the whole layer     :      1 calls; 103.178 msecs total time
+predicting: layer NO. 2.
+l.delta
+scale_cpu           :      1 calls;   6.936 msecs total time
+-----------------------------------------------
+activate            :      1 calls;  31.116 msecs total time
+add_bias            :      1 calls;  13.922 msecs total time
+batch_norm          :      1 calls;  40.413 msecs total time
+col2img             :      1 calls;  85.814 msecs total time
+gemm                :      1 calls;  60.215 msecs total time
+im2col              :      1 calls;  27.110 msecs total time
+part left           :      1 calls;  76.646 msecs total time
+fill_cpu            :      1 calls;   6.929 msecs total time
+the whole layer     :      1 calls; 358.097 msecs total time
+predicting: layer NO. 3.
+l.delta
+scale_cpu           :      1 calls;   1.715 msecs total time
+the whole layer     :      1 calls;  51.867 msecs total time
+predicting: layer NO. 4.
+l.delta
+scale_cpu           :      1 calls;   3.370 msecs total time
+-----------------------------------------------
+activate            :      1 calls;  16.614 msecs total time
+add_bias            :      1 calls;   6.892 msecs total time
+batch_norm          :      1 calls;  20.150 msecs total time
+col2img             :      1 calls;  34.590 msecs total time
+gemm                :      1 calls;  35.828 msecs total time
+im2col              :      1 calls;  12.828 msecs total time
+part left           :      1 calls;  38.871 msecs total time
+fill_cpu            :      1 calls;   3.500 msecs total time
+the whole layer     :      1 calls; 176.937 msecs total time
+predicting: layer NO. 5.
+l.delta
+scale_cpu           :      1 calls;   0.912 msecs total time
+the whole layer     :      1 calls;  26.116 msecs total time
+predicting: layer NO. 6.
+l.delta
+scale_cpu           :      1 calls;   1.669 msecs total time
+-----------------------------------------------
+activate            :      1 calls;   8.803 msecs total time
+add_bias            :      1 calls;   3.468 msecs total time
+batch_norm          :      1 calls;  10.220 msecs total time
+col2img             :      1 calls;   9.201 msecs total time
+gemm                :      1 calls;  24.500 msecs total time
+im2col              :      1 calls;   6.295 msecs total time
+part left           :      1 calls;  21.388 msecs total time
+fill_cpu            :      1 calls;   1.840 msecs total time
+the whole layer     :      1 calls;  89.801 msecs total time
+predicting: layer NO. 7.
+l.delta
+scale_cpu           :      1 calls;   0.505 msecs total time
+the whole layer     :      1 calls;  13.325 msecs total time
+predicting: layer NO. 8.
+l.delta
+scale_cpu           :      1 calls;   0.838 msecs total time
+-----------------------------------------------
+activate            :      1 calls;   4.347 msecs total time
+add_bias            :      1 calls;   1.699 msecs total time
+batch_norm          :      1 calls;   4.813 msecs total time
+col2img             :      1 calls;   3.234 msecs total time
+gemm                :      1 calls;  21.389 msecs total time
+im2col              :      1 calls;   3.685 msecs total time
+part left           :      1 calls;  16.778 msecs total time
+fill_cpu            :      1 calls;   0.854 msecs total time
+the whole layer     :      1 calls;  59.133 msecs total time
+predicting: layer NO. 9.
+l.delta
+scale_cpu           :      1 calls;   0.337 msecs total time
+the whole layer     :      1 calls;   7.020 msecs total time
+predicting: layer NO. 10.
+l.delta
+scale_cpu           :      1 calls;   0.440 msecs total time
+-----------------------------------------------
+activate            :      1 calls;   2.137 msecs total time
+add_bias            :      1 calls;   0.879 msecs total time
+batch_norm          :      1 calls;   2.439 msecs total time
+col2img             :      1 calls;   1.001 msecs total time
+gemm                :      1 calls;  28.186 msecs total time
+im2col              :      1 calls;   1.353 msecs total time
+part left           :      1 calls;  28.474 msecs total time
+fill_cpu            :      1 calls;   0.422 msecs total time
+the whole layer     :      1 calls;  66.362 msecs total time
+predicting: layer NO. 11.
+l.delta
+scale_cpu           :      1 calls;   0.496 msecs total time
+the whole layer     :      1 calls;  11.848 msecs total time
+predicting: layer NO. 12.
+l.delta
+scale_cpu           :      1 calls;   0.859 msecs total time
+-----------------------------------------------
+activate            :      1 calls;   4.311 msecs total time
+add_bias            :      1 calls;   1.777 msecs total time
+batch_norm          :      1 calls;   4.933 msecs total time
+col2img             :      1 calls;   2.066 msecs total time
+gemm                :      1 calls; 103.552 msecs total time
+im2col              :      1 calls;   4.001 msecs total time
+part left           :      1 calls;  96.161 msecs total time
+fill_cpu            :      1 calls;   0.866 msecs total time
+the whole layer     :      1 calls; 220.006 msecs total time
+predicting: layer NO. 13.
+l.delta
+scale_cpu           :      1 calls;   0.927 msecs total time
+-----------------------------------------------
+activate            :      1 calls;   4.055 msecs total time
+add_bias            :      1 calls;   1.715 msecs total time
+batch_norm          :      1 calls;   5.200 msecs total time
+col2img             :      1 calls;   2.055 msecs total time
+gemm                :      1 calls; 204.990 msecs total time
+im2col              :      1 calls;   9.630 msecs total time
+part left           :      1 calls; 189.684 msecs total time
+fill_cpu            :      1 calls;   0.872 msecs total time
+the whole layer     :      1 calls; 421.348 msecs total time
+predicting: layer NO. 14.
+l.delta
+scale_cpu           :      1 calls;   0.459 msecs total time
+-----------------------------------------------
+activate            :      1 calls;   0.750 msecs total time
+add_bias            :      1 calls;   0.695 msecs total time
+batch_norm          :      1 calls;   0.002 msecs total time
+col2img             :      1 calls;   0.827 msecs total time
+gemm                :      1 calls;  54.974 msecs total time
+im2col              :      1 calls;   8.991 msecs total time
+part left           :      1 calls;  12.146 msecs total time
+fill_cpu            :      1 calls;   0.371 msecs total time
+the whole layer     :      1 calls;  80.038 msecs total time
+predicting: layer NO. 15.
+l.delta
+scale_cpu           :      1 calls;   0.369 msecs total time
+the whole layer     :      1 calls;  21.202 msecs total time
+Prediction finishes!
+Getting region boxes...
+Start draw predictions...
+car: 34%
+bicycle: 57%
+dog: 82%
+Save & print images...
+Not compiled with OpenCV, saving to predictions.png instead.
+Total time          :      1 calls; 2303.398 msecs total time
+Exit program.
