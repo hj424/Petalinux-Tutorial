@@ -1,0 +1,92 @@
+datacfg:cfg/coco.data
+Start prediction...
+network_predict.
+forward_network.
+predicting: layer NO. 0.
+-----------------------------------------------
+activate            :      1 calls;  56.019 msecs total time
+add_bias            :      1 calls;  27.710 msecs total time
+batch_norm          :      1 calls; 280.551 msecs total time
+yolo_detector       :      1 calls; 103.600 msecs total time
+im2col              :      1 calls;  23.514 msecs total time
+fill_cpu            :      1 calls;  20.294 msecs total time
+predicting: layer NO. 1.
+predicting: layer NO. 2.
+-----------------------------------------------
+activate            :      1 calls;  31.116 msecs total time
+add_bias            :      1 calls;  13.794 msecs total time
+batch_norm          :      1 calls; 140.110 msecs total time
+yolo_detector       :      1 calls;  60.218 msecs total time
+im2col              :      1 calls;  27.084 msecs total time
+fill_cpu            :      1 calls;  10.135 msecs total time
+predicting: layer NO. 3.
+predicting: layer NO. 4.
+-----------------------------------------------
+activate            :      1 calls;  16.599 msecs total time
+add_bias            :      1 calls;   6.890 msecs total time
+batch_norm          :      1 calls;  70.065 msecs total time
+yolo_detector       :      1 calls;  35.817 msecs total time
+im2col              :      1 calls;  12.817 msecs total time
+fill_cpu            :      1 calls;   5.081 msecs total time
+predicting: layer NO. 5.
+predicting: layer NO. 6.
+-----------------------------------------------
+activate            :      1 calls;   8.813 msecs total time
+add_bias            :      1 calls;   3.525 msecs total time
+batch_norm          :      1 calls;  35.051 msecs total time
+yolo_detector       :      1 calls;  24.498 msecs total time
+im2col              :      1 calls;   6.423 msecs total time
+fill_cpu            :      1 calls;   2.515 msecs total time
+predicting: layer NO. 7.
+predicting: layer NO. 8.
+-----------------------------------------------
+activate            :      1 calls;   4.346 msecs total time
+add_bias            :      1 calls;   1.706 msecs total time
+batch_norm          :      1 calls;  17.561 msecs total time
+yolo_detector       :      1 calls;  21.394 msecs total time
+im2col              :      1 calls;   3.692 msecs total time
+fill_cpu            :      1 calls;   1.238 msecs total time
+predicting: layer NO. 9.
+predicting: layer NO. 10.
+-----------------------------------------------
+activate            :      1 calls;   2.137 msecs total time
+add_bias            :      1 calls;   0.822 msecs total time
+batch_norm          :      1 calls;   8.798 msecs total time
+yolo_detector       :      1 calls;  28.234 msecs total time
+im2col              :      1 calls;   1.456 msecs total time
+fill_cpu            :      1 calls;   0.604 msecs total time
+predicting: layer NO. 11.
+predicting: layer NO. 12.
+-----------------------------------------------
+activate            :      1 calls;   4.305 msecs total time
+add_bias            :      1 calls;   1.708 msecs total time
+batch_norm          :      1 calls;  17.624 msecs total time
+yolo_detector       :      1 calls; 103.539 msecs total time
+im2col              :      1 calls;   4.377 msecs total time
+fill_cpu            :      1 calls;   1.264 msecs total time
+predicting: layer NO. 13.
+-----------------------------------------------
+activate            :      1 calls;   4.123 msecs total time
+add_bias            :      1 calls;   1.709 msecs total time
+batch_norm          :      1 calls;  17.646 msecs total time
+yolo_detector       :      1 calls; 204.973 msecs total time
+im2col              :      1 calls;   9.516 msecs total time
+fill_cpu            :      1 calls;   1.250 msecs total time
+predicting: layer NO. 14.
+-----------------------------------------------
+activate            :      1 calls;   0.725 msecs total time
+add_bias            :      1 calls;   0.696 msecs total time
+batch_norm          :      1 calls;   0.002 msecs total time
+yolo_detector       :      1 calls;  55.135 msecs total time
+im2col              :      1 calls;   9.033 msecs total time
+fill_cpu            :      1 calls;   0.518 msecs total time
+predicting: layer NO. 15.
+Prediction finishes!
+Getting region boxes...
+Start draw predictions...
+car: 34%
+bicycle: 57%
+dog: 82%
+Save & print images...
+Total time          :      1 calls; 2831.107 msecs total time
+Exit program.
