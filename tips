@@ -96,6 +96,10 @@ chattr +i : can not write, delete, add data to this file
 ifconfig eth0 hw ether 00:0A:35:03:1B:B9
 /etc/init.d/networking start
 /etc/init.d/networking stop;ifconfig eth0 hw ether 00:0A:35:03:1B:B9;/etc/init.d/networking start
+
+18.check storage size
+$df 
+$du -h --max-depth=1
  
 //============================================================
 // Part 2: SDSoC
