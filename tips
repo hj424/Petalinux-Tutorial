@@ -1,9 +1,9 @@
 //tips
 // chisel
   $ sbt 'test:runMain adder.adderMain --help'
+  $ sbt 'test:runMain adder.adderMain --is-verbose'
 
-
-
+ref:http://www.scala-sbt.org/release/docs/Command-Line-Reference.html
 
 //============================================================
 // Part 1: Linux / Petalinux
