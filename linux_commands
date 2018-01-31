@@ -1,2 +1,15 @@
-grep virus ./* -r --colors   // 
-grep virus * -r --colors     // all the files
+ps aux | grep xx.py
+
+grep virus ./* -r --colors          // 
+grep virus * -r --colors | wc -l    // all the files
+
+vim tips:
+quit and save ":x" or ":wq" 
+":G" end of the file
+":g" top of the file
+
+"/VIRUS" find string "VIRUS" in the whole file
+press "n" to the next stirng in the file
+press "shift+n" to the last string in the file
+
+":%s/VIRUS/SAFE/g" replaces all string "VIRUS" with "SAFE" 
