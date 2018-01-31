@@ -1,0 +1,2 @@
+grep virus ./* -r --colors   // 
+grep virus * -r --colors     // all the files
