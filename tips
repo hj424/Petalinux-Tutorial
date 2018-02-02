@@ -1,12 +1,3 @@
-//tips
-// chisel
-  $ sbt 'test:runMain adder.adderMain --help'
-  $ sbt 'test:runMain adder.adderMain --is-verbose'
-  
-  $ sbt 'testOnly gcd.GCDTester -- -z Basic'
-
-ref:http://www.scala-sbt.org/release/docs/Command-Line-Reference.html
-
 //============================================================
 // Part 1: Linux / Petalinux
 //============================================================
@@ -16,8 +7,7 @@ ref:http://www.scala-sbt.org/release/docs/Command-Line-Reference.html
 2. lsattr: extra attributes
 chattr +a : can only add data to this file
 chattr +i : can not write, delete, add data to this file
-	
-	
+		
 3. provide permission for some appication - SUID
     mkdir /var/run/console
     touch /var/run/console/yourusername
@@ -86,8 +76,7 @@ chattr +i : can not write, delete, add data to this file
     /etc/shadow
     /etc/group
     /home
-    
-    
+     
  14. chmod 755 /
  
  chmod 770 second user cannot login: segfault!?
