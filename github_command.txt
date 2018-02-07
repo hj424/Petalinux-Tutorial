@@ -1,0 +1,16 @@
+# github commands
+
+$ git init
+$ clone https://github.com/hj424/Petalinux-Tutorial.git
+(1)
+$ git branch test     //create new branch: test
+$ git checkout test  //switch to branch: test
+$ git status
+$ git add –A     // push all modified files
+$ git commit –m “test”
+$ git push –all  // all modifications including branches
+(2)
+$ git checkout –b test origin/test  // track the remote branch locally
+
+$ git remote set-url origin https://hj424@github.com/hj424/Petalinux-Tutorial.git
+
