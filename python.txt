@@ -2,4 +2,6 @@
 anaconda
 pyCharm
 Conda
-Jupiter
+ipython
+
+Jupyter
