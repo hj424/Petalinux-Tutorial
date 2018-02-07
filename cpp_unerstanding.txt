@@ -1,0 +1,31 @@
+### 1. pass by value, pointer, and reference ###
+a. pass by value
+void f (int p){
+  ...
+}
+f(a);
+b. pass by reference
+void f (int &p){
+  ...
+}
+f(a);
+*** p has same adderss and value with a
+c. pass by pointer
+void f (int *p){
+  ...
+}
+f(&a);
+*** pointer p point to value a: that is *p=a
+d. pass a pointer by reference
+void f (int *&p){
+  ...
+}
+*b=&a;
+f(b);
+*** same pointer p and b
+void f (int *p){
+  ...
+}
+*b=&a;
+f(b);
+*** different pointer p and b, both point to a
