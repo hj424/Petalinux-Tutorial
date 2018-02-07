@@ -11,6 +11,9 @@ $ git commit –m “test”
 $ git push –all  // all modifications including branches
 (2)
 $ git checkout –b test origin/test  // track the remote branch locally
+(3)
+$ git checkout -b name_of_new_branch
+$ git push -u origin name_of_new_branch  // push locally created branch to the server
 
 $ git remote set-url origin https://hj424@github.com/hj424/Petalinux-Tutorial.git
 
