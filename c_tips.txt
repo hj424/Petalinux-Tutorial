@@ -1,0 +1,10 @@
+# printf
+\n: change line
+%d: signed integer; %i: hexadecimal; %u: unsigned integer
+%x: unsigned int as a hexadecimal number;; %o: unsigned int in octal;
+%c: character;
+%f: double, float; %e: double in standard form; %g: double in normal or exponential notation; %a: double in hexadecimal notation;
+%p: pointer
+printf("%x\n",&p): address of the pointer; 
+printf("%x\n", p): content stored in the pointer;
+printf("%x\n",*p): value it points to;
