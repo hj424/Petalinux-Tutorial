@@ -6,12 +6,26 @@ $ which python   // find position of sw
 ////////////////////////////////////////////////////////////////////////////////
 // commands
 ///////////////////////////////////////////////////////////////////////////////
-ps aux | grep xx.py
+$ ps aux | grep xx.py
 
-grep virus ./* -r --colors          // 
-grep virus * -r --colors | wc -l    // all the files
+$ grep virus ./* -r --colors          // 
+$ grep virus * -r --colors | wc -l    // all the files
 
-vim tips:
+$ less
+$ tail/head -10 file
+
+$ crond    // repreated executer same operation
+$ crontab https://kb.iu.edu/d/afiz  // maintain a cron file
+
+
+
+*** vim tips: ***
+":set nu" display the line numbers;
+":nohl" disable highlight text;
+"$" jump to the end of this line; "0" jump to the start of thsi line;
+"ctrl+b" move back one full screen; "ctrl+u" move back 1/2 full screen;
+"ctrl+f" move forward one full screen; "ctrl+d" move forward 1/2 full screen;
+
 quit and save ":x" or ":wq" 
 ":G" end of the file
 ":g" top of the file
