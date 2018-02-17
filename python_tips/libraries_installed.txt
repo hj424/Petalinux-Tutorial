@@ -1,0 +1,5 @@
+# recording of libraries installed on server
+
+1.PIL - image processing
+2.numpy - fundamental package for scientific computing
+3.scipy - scientific and numerical tools: integration, ordinary differerntial equation(ODE) solvers, etc.
