@@ -1,0 +1,2 @@
+==  compares value
+=== compares value and type
