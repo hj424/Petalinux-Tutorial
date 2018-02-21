@@ -13,3 +13,8 @@ press "n" to the next stirng in the file
 press "shift+n" to the last string in the file
 
 ":%s/VIRUS/SAFE/g" replaces all string "VIRUS" with "SAFE" 
+
+":vsp src/test/test.py" vertical split the window
+"ctrl+ww" switch windows
+"ctrl+ws" split windows horizontally
+"ctrl+wv" split windows vertically
