@@ -1,1 +1,5 @@
 $ service postgreaql start
+
+// default user postgres, no password
+$ /etc/passwd
+$ sudo -u postgres psql
