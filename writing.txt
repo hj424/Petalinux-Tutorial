@@ -1,3 +1,0 @@
-coca:
-// return all phrase including research used in verb
-[v*] research

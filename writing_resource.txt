@@ -1,0 +1,14 @@
+1. Vocabulary
+coca:
+// return all phrase including research used in verb
+[v*] research
+
+2. Phrases and Structure of Sentences
+//
+manchester academic phrase bank
+
+3. cornell turn in to check plagiarism
+
+
+
+cornell thesis and dissertations by academic deiscipline
