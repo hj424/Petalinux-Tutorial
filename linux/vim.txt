@@ -9,13 +9,13 @@ $ vi .vimrc
 
 ":set nu" display the line numbers;
 ":nohl" disable highlight text;
-"$" jump to the end of this line; "0" jump to the start of thsi line;
+"$" jump to the end of this line; "0" jump to the start of this line;
 "ctrl+b" move back one full screen; "ctrl+u" move back 1/2 full screen;
 "ctrl+f" move forward one full screen; "ctrl+d" move forward 1/2 full screen;
 
 quit and save ":x" or ":wq" 
-":G" end of the file
-":g" top of the file
+":G" end of the file i.e. SHIFT + g
+":g" top of the file i.e. gg (double click g)
 
 "/VIRUS" find string "VIRUS" in the whole file
 press "n" to the next stirng in the file
@@ -27,3 +27,5 @@ press "shift+n" to the last string in the file
 "ctrl+ww" switch windows
 "ctrl+ws" split windows horizontally
 "ctrl+wv" split windows vertically
+
+"shift+v" select multiple lines
