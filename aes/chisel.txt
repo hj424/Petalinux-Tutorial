@@ -2,6 +2,7 @@
 // chisel
   $ sbt 'test:runMain adder.adderMain --help'
   $ sbt 'test:runMain adder.adderMain --is-verbose'
+  $ sbt 'test:runMain adder.adderMain --backend-name verilator'
   
   $ sbt 'testOnly gcd.GCDTester -- -z Basic'
 
