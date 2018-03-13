@@ -1,9 +1,13 @@
 //tips
 // chisel
-  $ sbt 'test:runMain adder.adderMain --help'
-  $ sbt 'test:runMain adder.adderMain --is-verbose'
-  $ sbt 'test:runMain adder.adderMain --backend-name verilator'
-  
+  // run test cases 
   $ sbt 'testOnly gcd.GCDTester -- -z Basic'
+  // run in debug mode
+  $ sbt 'test:runMain adder.adderMain --is-verbose'
+  // run test cases && generate verilog code
+  $ sbt 'test:runMain adder.adderMain --backend-name verilator'
+  // check other options
+  $ sbt 'test:runMain adder.adderMain --help'
+  
 
 ref:http://www.scala-sbt.org/release/docs/Command-Line-Reference.html
