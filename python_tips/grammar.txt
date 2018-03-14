@@ -1,2 +1,5 @@
 g = lambda x : x ** 2
 g(3)
+
+2D array:
+test = [[] i in range(5)]
