@@ -1,0 +1,25 @@
+Python's instance. class, and static methods 
+
+# Inherite attributes from Object
+class MyClass(Object):
+    def method(self): #1
+        return 'instance method called', self
+
+    @classmethod
+    def classmethod(cls): #2
+        return 'class method called', cls
+
+    @staticmethod
+    def staticmethod(): #3
+        return 'static method called
+   
+1. Instance methods can freely access attributes and other methods on the same object
+* can modified object state by self.__class__
+
+2. Class methods: takes a cls method that points to the class
+
+3. Static methods: takes neither a self or a cls parameter 
+* usually used locally in the mothod
+
+https://realpython.com/blog/python/instance-class-and-static-methods-demystified/
+       
