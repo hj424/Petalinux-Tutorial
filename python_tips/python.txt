@@ -5,3 +5,7 @@ Conda
 ipython
 
 Jupyter
+
+# online resources
+ploting script
+https://bokeh.pydata.org/en/latest/
