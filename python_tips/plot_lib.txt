@@ -1,0 +1,10 @@
+1.matplotlib
+2.seaborn
+3.ggplot
+4.bokeh
+5.pygal
+6.plotly
+7.geoplotlib
+8.gleam
+9.missingno
+10.leather
