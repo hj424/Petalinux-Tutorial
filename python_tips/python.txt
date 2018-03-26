@@ -9,3 +9,5 @@ Jupyter
 # online resources
 ploting script
 https://bokeh.pydata.org/en/latest/
+
+einsum: parallel computing within Vector
