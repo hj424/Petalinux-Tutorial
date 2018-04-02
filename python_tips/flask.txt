@@ -1,0 +1,5 @@
+# This tells your operating system to listen on all public IPs.
+app.run(host='0.0.0.0')
+
+If it is, allow the traffic using iptables:
+$ iptables -I INPUT -p tcp --dport 3000 -j ACCEPT
