@@ -1,7 +1,12 @@
 # github commands
 
 $ git init
-$ clone https://github.com/hj424/Petalinux-Tutorial.git
+$ git clone https://github.com/hj424/Petalinux-Tutorial.git
+
+*** clone private repo: add username to find it or else - 403 ***
+git clone https://username@github.com/blah/blahblah.git
+git clone https://username:password@github.com/blah/blahblah.git
+
 (1)
 $ git branch test     //create new branch: test
 $ git checkout test  //switch to branch: test
