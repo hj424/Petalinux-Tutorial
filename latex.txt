@@ -1,0 +1,8 @@
+comment in latex "%"
+
+# select type of academic writing
+\documentclass{article}
+book, letter, beamer
+
+# pacakge: change configuration
+\usepackage[utf8]
