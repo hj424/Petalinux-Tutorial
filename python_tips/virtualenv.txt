@@ -1,6 +1,10 @@
 sudo pip install virtualenv
 
-# createing a local environment
+# createing a local environment copy current python 
 virtualenv my_app
 # create path for custom python interpreter
 virtualenv --python=/opt/python3.3/python
+# activate local python environment
+source /bin/activate
+# deactivate 
+deactivate
