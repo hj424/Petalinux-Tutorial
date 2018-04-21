@@ -1,0 +1,6 @@
+sudo pip install virtualenv
+
+# createing a local environment
+virtualenv my_app
+# create path for custom python interpreter
+virtualenv --python=/opt/python3.3/python
