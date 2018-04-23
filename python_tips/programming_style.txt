@@ -10,3 +10,4 @@
    
 4. sublime linter - check style!
 5. try except usage...
+6. check point "assert" 
