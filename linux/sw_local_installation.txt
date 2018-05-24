@@ -10,4 +10,3 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$SW/sbt/bin  //not necessary??
 Special cases:
 export M4=/home/hj424/softwre/bin/m4 //! locally installed m4 was not found !
 export PATH=$PATH:/home/hj424/software/bin //! add path manually again before run ./configure !
-
