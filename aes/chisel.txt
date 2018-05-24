@@ -18,3 +18,7 @@ Resources:
 3. Template for Chisel design: https://github.com/ucb-bar/chisel-template
 4. Chisel 3 cheat sheet: https://chisel.eecs.berkeley.edu/doc/chisel-cheatsheet3.pdf
 5. Paper of introducing Chisel: https://dl.acm.org/citation.cfm?id=2228584
+
+
+// 
+$ sbt compile 
