@@ -22,3 +22,5 @@ Resources:
 
 // 
 $ sbt compile 
+$ sbt publish-local #1.1
+$ sbt publishLocal  #1.2
