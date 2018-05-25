@@ -1,14 +1,18 @@
 // basic command
-$ sbt compile       // compile all sources
-$ sbt run           // run all sources
-$ sbt scalaVersion  // check scalaVersion for a SPECIFIC project
-$ sbt sbtVersion    // check sbtVersion for a SPECIFIC project
-$ sbt test          // run tests
-$ sbt ~testQuick    // run incremental tests continuously
-$ sbt projects      // list all projects
-$ sbt dist          // create a zip distribution
+$ sbt compile               // compile all sources
+$ sbt run                   // run all sources
+$ sbt scalaVersion          // check scalaVersion for a SPECIFIC project
+$ sbt sbtVersion            // check sbtVersion for a SPECIFIC project
+$ sbt test                  // run tests
+$ sbt ~testQuick            // run incremental tests continuously
+$ sbt projects              // list all projects
+$ sbt dist                  // create a zip distribution
+$ sbt help dist
+$ sbt inspect tree dist     // inpect recursively on the dependency tasks tasks
 // not a valid command ??
-
+$ sbt Docker/publishLocal   // sockerize your app
+$ docker run hello_2.12:0.1.0-SNAPSHOT
+$ sbt ++2.11.12!            // switching scalaVersion temprorarily (dynamically under scala shell)
 
 
 // scala REPL - inquery weather in New York: interesting example
