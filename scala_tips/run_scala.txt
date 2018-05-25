@@ -1,0 +1,7 @@
+// basic command
+$ sbt compile       // compile all sources
+$ sbt run           // run all sources
+$ sbt scalaVersion  // check scalaVersion for a SPECIFIC project
+$ sbt test          // run tests
+$ sbt ~testQuick    // run incremental tests continuously
+
