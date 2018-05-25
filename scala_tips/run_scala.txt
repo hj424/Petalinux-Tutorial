@@ -2,6 +2,14 @@
 $ sbt compile       // compile all sources
 $ sbt run           // run all sources
 $ sbt scalaVersion  // check scalaVersion for a SPECIFIC project
+$ sbt sbtVersion    // check sbtVersion for a SPECIFIC project
 $ sbt test          // run tests
 $ sbt ~testQuick    // run incremental tests continuously
+$ sbt projects      // list all projects
+$ sbt dist          // create a zip distribution
+// not a valid command ??
 
+
+
+// scala REPL - inquery weather in New York: interesting example
+https://www.scala-sbt.org/1.x/docs/sbt-by-example.html
