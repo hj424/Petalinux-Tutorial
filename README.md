@@ -5,4 +5,4 @@
 ##### Date    : Feb. 7, 2018
 ##### Version : 1.0
 
-various tips/understanding of something
+various tips/memos
