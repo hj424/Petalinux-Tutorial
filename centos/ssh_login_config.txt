@@ -1,0 +1,13 @@
+# login the server in a dubeg mode
+ssh -vvv Hanchen@132.236.59.106
+
+In server's /etc/ssh/sshd_config:
+To enable password authentication, uncomment
+#PasswordAuthentication yes
+
+To enable root login, uncomment
+#PermitRootLogin yes
+
+To enable ssh key login, uncomment
+#PubkeyAuthentication yes
+#AuthorizedKeysFile .ssh/authorized_keys
