@@ -1,5 +1,5 @@
 # login the server in a dubeg mode
-ssh -vvv Hanchen@132.236.59.106
+$ ssh -vvv Hanchen@132.236.59.106
 
 In server's /etc/ssh/sshd_config:
 To enable password authentication, uncomment
@@ -11,3 +11,11 @@ To enable root login, uncomment
 To enable ssh key login, uncomment
 #PubkeyAuthentication yes
 #AuthorizedKeysFile .ssh/authorized_keys
+
+Then in the line add the corresponding users:
+# AllowUsers Hanchen
+
+After configuration: restart the sshd service
+$ service sshd restart
+$ service sshd start
+$ service sshd stop
