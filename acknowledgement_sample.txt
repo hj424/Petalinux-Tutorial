@@ -1,0 +1,5 @@
+This document is adapted from a project description originally developed by Prof. Ryan
+Kastner for CSE 237C at UCSD.
+This design originated from an ECE-5775 project originally implemented by Ackerley Tng and Edgar Munoz.
+The baseline FPGA+Linux setup used in tutorial is based on the Xillinux distribution provided
+by Xillybus Ltd. (http://xillybus.com/xillinux)
