@@ -1,2 +1,6 @@
-Vivado timing constrain: "clcok" is the port name.
+# Vivado timing constrain: "clcok" is the port name.
 create_clock -name "ap_clock" -period 2.500 [get_ports clock]
+
+# Keep the same structure for all instantiation
+# Avoid flatten for this midule ROM_sbox
+(* keep_hierarchy = "yes" *) module ROM_sbox(
