@@ -1,2 +1,4 @@
 1. enable input TCP connect
 sudo iptables -I INPUT -p tcp --dport 3000 -j ACCEPT
+
+2. server with domain name "zhang-precision-02.ece.cornell.edu"; IP: http://132.236.59.106/;
