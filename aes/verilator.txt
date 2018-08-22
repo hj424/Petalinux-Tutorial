@@ -1,1 +1,27 @@
-sdf
+Verilator fails on lines like this in generated verilog:
+$fwrite(32'h80000002,"output test event %d testing mem_out.bits = %d, should be %d\n",_T_12,device_under_test_io_mem_out_bits,_GEN_7);
+when device_under_test_io_mem_out_bits width is larger than 64 bits with this message:
+
+%Error: Foo.v:1116: Unsupported: $fwrite of dec format of > 64 bit results (use hex format instead)
+
+This is due to %d formatting used in OrderedDecoupledHWIOTester.scala to generate fwrite messages in verilog. In my local version I changed those to %x and it worked.
+
+e.g.
+Here's the diff, but I am not sure these are the only lines that need fixes.
+
+--- a/src/main/scala/chisel3/iotesters/OrderedDecoupledHWIOTester.scala
++++ b/src/main/scala/chisel3/iotesters/OrderedDecoupledHWIOTester.scala
+@@ -315,11 +315,11 @@ abstract class OrderedDecoupledHWIOTester extends HWIOTester {
+
+   when(controlling_port.ready && controlling_port.valid) {
+     ports_referenced_for_this_controlling_port.foreach { port =>
+     printf(s"output test event %d testing ${name(port)} = %d, should be %d\n",
+     printf(s"output test event %d testing ${name(port)} = %x, should be %x\n",
+       event_counter.value, port.asInstanceOf[UInt], port_vector_events(port)(counter_for_this_decoupled.value)
+     )
+     when(port.asInstanceOf[UInt] != port_vector_events(port)(counter_for_this_decoupled.value)) {
+       printf(s"Error: event %d ${name(port)} was %d should be %d\n",
+       printf(s"Error: event %d ${name(port)} was %x should be %x\n",
+         event_counter.value, port.asUInt, port_vector_events(port)(counter_for_this_decoupled.value))
+       assert(false.B)
+       stop()
