@@ -31,3 +31,5 @@ already have tabs, then *** ":retab"
 "ctrl+wv" split windows vertically
 
 "shift+v" select multiple lines
+
+# open two files ":/tabedit test.txt"; using gt to switch windows
