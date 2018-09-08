@@ -9,3 +9,9 @@
 printf("%x\n",&p): address of the pointer; 
 printf("%x\n", p): content stored in the pointer-> address of the value;
 printf("%x\n",*p): value it points to;
+
+
+# difference among fprintf, printf, and sprintf
+fprintf writes formatted text to the output stream you specify.
+printf is equivalent to writing fprintf(stdout, ...) and writes formatted text to wherever the standard output stream is currently pointing.
+sprintf writes formatted text to an array of char, as opposed to a stream.
