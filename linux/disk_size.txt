@@ -1,0 +1,4 @@
+# size of folder
+du --max-depth=1 -h <your home dir>
+# disk usage and percentage
+df -h
