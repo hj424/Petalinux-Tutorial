@@ -32,4 +32,7 @@ already have tabs, then *** ":retab"
 
 "shift+v" select multiple lines
 
+use mouse in vim
+:set mouse=a
+
 # open two files ":/tabedit test.txt"; using gt to switch windows
