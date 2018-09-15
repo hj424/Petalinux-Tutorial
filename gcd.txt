@@ -1,0 +1,15 @@
+# gcd debugger
+$ gcd vulnerable  // vulnerable is an executable file
+(gcd) b main    // setup break point for functions
+(gcd) b bof
+(gcd) r        // start the program from break point
+(gcd) n        // run next instruction/line
+
+(gcd) x $esp   // print value of stack pointer
+(gcd) x $ebp   // print value of frame pointer
+(gcd) x/100x $esp // print the memory content pointed by stack poninter
+(gcd) p system // print the address of C function system()
+(gcd) p exit   // print the function of C function exit()
+(gcd) p &buffer // print the address of array buffer... NOT accurate!?
+
+$ xxd file   // open hexadecimal file
