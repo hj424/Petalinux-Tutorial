@@ -6,6 +6,7 @@ $ vi .vimrc
   set expandtab
   syntax on 
   colorscheme desert
+  set hlsearch
 
 ":set nu" display the line numbers;
 ":nohl" disable highlight text;
