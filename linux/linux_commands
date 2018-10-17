@@ -16,6 +16,9 @@ $ tail/head -10 file
 
 $ crond    // repreated executer same operation
 $ crontab https://kb.iu.edu/d/afiz  // maintain a cron file
+
 // find files
 $ find -name *.v
 
+// find key work *** in folders/files
+$ grep -rnw '/path/to/somewhere/' -e '***'
