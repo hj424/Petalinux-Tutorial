@@ -1,0 +1,116 @@
+Find examples in side the xilinx tool, folder "sample/"
+
+Makefile:
+APPSOURCES = include all your .cpp files here
+EXECUTABLE = the final executable name
+
+PLATFORM = {zed, zc702, zc706} make sure you edit this, otherwise the board will simply break
+
+SDSCC_FLAGS = 
+[-mno-bitstream]\ do not generate the bitstream. this is useful if you just want to estimate the design
+[-mno-boot-files]\ do not generate sd_card folder. this can be used along with the above option
+-sds-pf ${PLATFORM} \
+-sds-hw FUNCTION_NAME FUNCTION_FILE -sds-end \ you can have multiple (name, file) pair but only one name in one file
+
+===========================================================================================================================
+Before the tutorial starts, carefully read the following rules, which might save your time on debugging.
+1. Currently, there are 5 Zedboards and 2 zc706 available for SDSoC development. The MAC addresses of them are listed here. 
+ 
+IP Name	Device MAC Address
+zhang-zedboard-01.ece.cornell.edu	00:0A:35:00:01:23
+zhang-zedboard-02.ece.cornell.edu	14:CC:20:C8:CC:F5
+zhang-zedboard-03.ece.cornell.edu	00:0A:35:00:01:25
+zhang-zedboard-04.ece.cornell.edu	00:0A:35:00:01:27
+zhang-zedboard-05.ece.cornell.edu	00:0A:35:00:01:29
+zhang-zc706-01.ece.cornell.edu	00:0A:35:03:1B:B9
+zhang-zc706-02.ece.cornell.edu	00:0A:35:03:41:F5
+
+You can check the board status by
+https://web.csl.cornell.edu/courses/ece5775/zedboard.html
+
+ 
+
+If it is "root", it means someone is using it. Otherwise, the status will be idle.
+
+ 
+
+2. You can remotely cold reboot (hard reboot) your board via the following link.
+
+http://zhang-dli-01.ece.cornell.edu
+
+The username is ECE5775 and the password is f2017. You can turn on, turn off, or "cycle" your board. "Cycle" means rebooting. You need to access the link via school's network similar to the ZedBoards. Thus, one way to do it is to use the browser on ecelinux. First, you need to enable the Xwindows by
+
+ssh -X username@ecelinux.ece.cornell.edu  
+After that, use the browser on the server
+
+firefox &
+Finally, enter the given link.
+
+ 
+
+3. Always back up your files on board. If your board is down, it is possible that we need to reset your board.
+
+ 
+
+Now we start the tutorial.
+
+1. Source the script that enables you to use SDSoC.
+
+source /classes/ece5775/setup-vivado-2017.sh
+You can double check by using the following command.
+
+sds++ -version
+ 
+
+2. You can play with the examples provided by Xilinx. You can find the examples under the following directory.
+
+/opt/xilinx/Xilinx_SDx_2017.2_sdx_0823_1/SDx/2017.2/samples/
+In each example, there is a Makefile. Take the one in mmult as an example.
+
+ APPSOURCES = mmult.cpp mmult_accel.cpp // Your source files
+ EXECUTABLE = mmult.elf // The generated executable file
+ 
+ PLATFORM = zc702 // Possible candidates: {zed, zc702, zc706}
+// Which function in which file you want to be synthesized on FPGA
+// In this example, function mmult_accel in mmult_accel.cpp is synthesized on FPGA
+ SDSFLAGS = -sds-pf ${PLATFORM} \
+   -sds-hw mmult_accel mmult_accel.cpp -sds-end \
+   -poll-mode 1
+Please double check the platform before you run the Makefile.
+
+ 
+
+2. Currently, we have 5 Zedbaords (01~05) and 2 zc706 (01~02). To connect to the board remotely, use the following ssh command.
+
+ssh root@zhang-xxx-yy.ece.cornell.edu 
+, where xxx is the board name and yy is a 2-digit number. For example,
+
+ssh root@zhang-zc706-02.ece.cornell.edu
+The default password is "root". Do not change the password.
+
+3. Add the following lines to your ~/.ssh/config on your ecelinux. If no such file exists, create one.
+
+ Host zhang-*.ece.cornell.edu
+   StrictHostKeyChecking no
+   UserKnownHostsFile=/dev/null
+   LogLevel QUIET
+ 
+4 After make, a sd_card folder will be generated. You should see a BOOT.BIN file under sd_card. At the same directory, run the script.
+
+change_mac.sh
+
+chmod +x change_mac.sh
+./change_mac.sh MAC_ADDRESS
+, where the MAC_ADDRESS is given to you when you are assigned a board. After that, copy everything under sd_card to your board. For example,
+
+scp -r sd_card/* root@zhang-xxx-yy.ece.cornell.edu:/mnt/
+You don't need to mount the device. DO NOT remove the files unless you know they belong to you.
+
+
+5. Login to the board, reboot it, and exit.
+reboot; exit
+ 
+6. Wait some time and login again. Execute the .elf file under the /mnt directory. In the same mmult example,
+
+cd /mnt
+./mmult.elf
