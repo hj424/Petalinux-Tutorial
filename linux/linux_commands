@@ -22,3 +22,10 @@ $ find -name *.v
 
 // find key work *** in folders/files
 $ grep -rnw '/path/to/somewhere/' -e '***'
+
+// use different version of software
+$ module load python-2.7.14
+$ ls -ls /usr/bin/python*
+
+// check the available python libraries
+$ pid freeze
