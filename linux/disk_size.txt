@@ -2,3 +2,6 @@
 du --max-depth=1 -h <your home dir>
 # disk usage and percentage
 df -h
+
+# size left in the current directory
+df -Ph . | tail -1 | awk '{print $4}'
