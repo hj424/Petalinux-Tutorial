@@ -1,0 +1,25 @@
+$ service postgreaql start
+
+// default user postgres, no password
+md5
+$ /etc/passwd
+$ sudo -u postgres psql
+
+trust
+sudo su - postgres
+
+psql template1
+creating role on pgsql with privilege as "superuser"
+
+CREATE ROLE username superuser;
+eg. CREATE ROLE demo superuser;
+Then create user
+
+CREATE USER username; 
+eg. CREATE USER demo;
+Assign privilege to user
+
+GRANT ROOT TO username;
+And then enable login that user, so you can run e.g.: psql template1, from normal $ terminal:
+
+ALTER ROLE username WITH LOGIN;

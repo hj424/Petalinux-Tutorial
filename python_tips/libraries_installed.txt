@@ -1,0 +1,12 @@
+# recording of libraries installed on server
+
+1.PIL - image processing
+2.numpy - fundamental package for scientific computing (in system)
+3.scipy - scientific and numerical tools: integration, ordinary differerntial equation(ODE) solvers, etc.
+  -- requires support from numpy: numpy1.14.0 && scipy-1.0.0
+
+# uninstalling library
+$ sudo pip uninstall scipy
+
+# check installed library
+# pip freeze | grep scipy

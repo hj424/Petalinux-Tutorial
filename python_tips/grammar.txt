@@ -1,0 +1,10 @@
+g = lambda x : x ** 2
+g(3)
+
+2D array:
+test = [[] for i in range(5)]
+
+x = [1,2,3]
+f1(*x)  # suppoose x needs 2 variable, * will unpack list x and transmit 1 and 2 to f1
+
+eps = 1E-5: 10-5

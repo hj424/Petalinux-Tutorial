@@ -1,0 +1,4 @@
+==  compares value
+=== compares value and type
+
+prototypting: addding methods to functions

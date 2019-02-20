@@ -1,0 +1,8 @@
+1. download the source code
+$ wget https://bootstrap.pypa.io/get-pip.py
+2. install pip into your local directory
+$ python get-pip.py --user // pip is in ~/.local/bin !!!
+3. export path
+$ export PATH=$PATH:/home/hj424/.local/bin
+4. using pip to install library locally
+$ ./pip install <package_name> --user

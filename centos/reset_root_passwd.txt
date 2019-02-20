@@ -1,0 +1,5 @@
+1. ESC enter GNU GRUB interface (enter single user mode)
+2. Select CentOS(2.6.32 XXXX) then press "a" (modify kernel settings)
+3. rd_NO_DM rhgb quiet 1 (add 1 here)
+4. press enter to bootup
+5. Enter root shell, press "passwd" to reset root password!

@@ -1,0 +1,26 @@
+//tips
+// chisel
+  // run test cases 
+  $ sbt 'testOnly gcd.GCDTester -- -z Basic'
+  // run in debug mode
+  $ sbt 'test:runMain adder.adderMain --is-verbose'
+  // run test cases && generate verilog code
+  $ sbt 'test:runMain adder.adderMain --backend-name verilator'
+  // check other options
+  $ sbt 'test:runMain adder.adderMain --help'
+  
+
+ref:http://www.scala-sbt.org/release/docs/Command-Line-Reference.html
+
+Resources:
+1. Chisel 3 tutorial: https://github.com/freechipsproject/chisel3/wiki/Short-Users-Guide-to-Chisel
+2. Examples of Chisel design: https://github.com/ucb-bar/chisel-tutorial
+3. Template for Chisel design: https://github.com/ucb-bar/chisel-template
+4. Chisel 3 cheat sheet: https://chisel.eecs.berkeley.edu/doc/chisel-cheatsheet3.pdf
+5. Paper of introducing Chisel: https://dl.acm.org/citation.cfm?id=2228584
+
+
+// 
+$ sbt compile 
+$ sbt publish-local #1.1
+$ sbt publishLocal  #1.2

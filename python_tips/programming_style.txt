@@ -1,0 +1,13 @@
+1. Using spaces!
+2. x = 1
+3. blank lines
+   ##
+   ##
+   class test(object):
+     pass
+   ##
+   ##
+   
+4. sublime linter - check style!
+5. try except usage...
+6. check point "assert" 

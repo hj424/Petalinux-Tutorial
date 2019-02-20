@@ -1,0 +1,1 @@
+scl enable python27 bash

@@ -1,8 +1,0 @@
-//tips
-// chisel
-  $ sbt 'test:runMain adder.adderMain --help'
-  $ sbt 'test:runMain adder.adderMain --is-verbose'
-  
-  $ sbt 'testOnly gcd.GCDTester -- -z Basic'
-
-ref:http://www.scala-sbt.org/release/docs/Command-Line-Reference.html

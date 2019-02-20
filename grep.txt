@@ -1,0 +1,9 @@
+$ grep -rw "text" // find all "text" in the current directory recurrsively
+-r: recursively
+-w: display only line with the exact word
+-e: specify the string pattern
+-i: ignore case distinction
+-n: display the line number
+--include: specify the file types
+$ grep -rinw --include=\*.sh ~/bin -e "check_root" 
+$ grep -riw ~/bin -e "check_root" -e "netstat"

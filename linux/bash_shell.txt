@@ -1,0 +1,5 @@
+# Basic tutorial
+  #! /bin/bash
+  echo Hello World!
+$ chmod 755 test.sh
+$ ./test.sh

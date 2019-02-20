@@ -1,0 +1,3 @@
+# install software using homebrew
+$ brew install riscv/riscv
+# location: /usr/local/Cellar/

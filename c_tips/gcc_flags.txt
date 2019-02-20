@@ -1,0 +1,7 @@
+gcc -c myfile.c  # compiles source files without linking
+gcc -g           # generates debug information to used by GDB debugger
+gcc -o           # writes the output file
+gcc -O2          # sets the compilers optimization level
+gcc -I           # adds include directory of header files
+gcc -l           # links with a library file
+gcc -L           # looks in directory for library files

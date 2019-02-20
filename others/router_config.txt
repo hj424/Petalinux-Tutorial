@@ -1,0 +1,4 @@
+Binding Mac address with static IP:
+(1) DHCP (Dynamic Host Configuration Protocol)
+Address reservation -> IP&MAC binding
+(2) port forwarding

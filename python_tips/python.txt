@@ -1,0 +1,15 @@
+### python platforms ###
+anaconda
+pyCharm
+Conda
+ipython
+
+Jupyter
+
+# online resources
+ploting script
+https://bokeh.pydata.org/en/latest/
+
+einsum: parallel computing within Vector
+pool: multiprocessing library
+celery: computing in defferent machines

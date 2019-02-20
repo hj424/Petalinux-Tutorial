@@ -1,3 +1,0 @@
--I <path>: find special headers
--L <path>: find .lib .o .a
--l <path>: 

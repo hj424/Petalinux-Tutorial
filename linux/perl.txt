@@ -1,0 +1,3 @@
+# install modules
+$ perl -e shell -MCPAN
+$ install XML::Parser

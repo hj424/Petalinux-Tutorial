@@ -1,0 +1,6 @@
+-I <path>: find special headers
+-L <path>: find .lib .o .a
+-l <path>: 
+
+.PHONY: all clean // clarify the difference (no relation) between file (say: all.cpp) and all target
+$@ - current target; @< - first dependency file; $^ - all dependency file; $* - stem; $? - all dependency file that are newer than target

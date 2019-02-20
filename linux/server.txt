@@ -1,0 +1,12 @@
+// server domain names
+ecelinux.ece.cornell.edu // ecelinux
+zhang-0x.ece.cornell.edu 
+zhang-x1.ece.cornell.edu
+zhang-zedboard-0x.ece.cornell.edu
+zhang-zc706-0x.ece.cornell.edu (root)
+
+// cs server
+ugclinux.cs.cornell.edu
+
+# Usually, Xilinx is being installed under /opt
+1. xilinx - /opt

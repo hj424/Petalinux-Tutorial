@@ -1,0 +1,28 @@
+# github commands
+
+$ git init
+$ git clone https://github.com/hj424/Petalinux-Tutorial.git
+
+*** clone private repo: add username to find it or else - 403 ***
+git clone https://username@github.com/blah/blahblah.git
+git clone https://username:password@github.com/blah/blahblah.git
+*** sometimes you need to add some configuration ***
+git config --global user.name "hj424"
+git config --global user.name "hj424@cornell.edu"
+
+(1)
+$ git branch test     //create new branch: test
+$ git checkout test  //switch to branch: test
+$ git status
+$ git add –A     // push all modified files
+$ git commit –m “test”
+$ git push –all  // all modifications including branches
+(2)
+$ git checkout –b test origin/test  // track the remote branch locally
+(3)
+$ git checkout -b name_of_new_branch
+$ git push -u origin name_of_new_branch  // push locally created branch to the server
+
+$ git remote set-url origin https://hj424@github.com/hj424/Petalinux-Tutorial.git
+
+Git large file storage > 100MB

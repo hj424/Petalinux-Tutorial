@@ -1,0 +1,4 @@
+# Display ip address
+$ ifconfig
+$ ip addr show
+$ hostname -I

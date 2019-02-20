@@ -1,0 +1,40 @@
+*** change default settings ***
+$ vi .vimrc
+  set smartindent
+  set tabstop=2
+  set shiftwidth=2
+  set expandtab
+  syntax on 
+  colorscheme desert
+  set hlsearch
+  set mouse=a
+
+":set nu" display the line numbers;
+":nohl" disable highlight text;
+"$" jump to the end of this line; "0" jump to the start of this line;
+"ctrl+b" move back one full screen; "ctrl+u" move back 1/2 full screen;
+"ctrl+f" move forward one full screen; "ctrl+d" move forward 1/2 full screen;
+
+quit and save ":x" or ":wq" 
+":G" end of the file i.e. SHIFT + g
+":g" top of the file i.e. gg (double click g)
+
+"/VIRUS" find string "VIRUS" in the whole file
+press "n" to the next stirng in the file
+press "shift+n" to the last string in the file
+
+":%s/VIRUS/SAFE/g" replaces all string "VIRUS" with "SAFE" 
+# remove tabs in python script *****
+already have tabs, then *** ":retab"
+
+":vsp src/test/test.py" vertical split the window
+"ctrl+ww" switch windows
+"ctrl+ws" split windows horizontally
+"ctrl+wv" split windows vertically
+
+"shift+v" select multiple lines
+
+use mouse in vim
+:set mouse=a
+
+# open two files ":/tabedit test.txt"; using gt to switch windows
