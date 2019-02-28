@@ -1,0 +1,21 @@
+// domain name
+brg-vip.ece.cornell.edu
+// working directory
+/work/global/
+
+// Simulation using gem5
+// setup environment for gem5
+$ source setup-brg.sh
+// alloy-gem5
+$ make build-gem5
+// before you build it, BE SURE to setup the parameters
+// located in spxcel-bmarks/spdm3/params.h
+$ make run-spdm3-1GHz  // system frequency: 1GHz CPU and accelerator
+
+// compile source code
+$ module load scl-6 // use latest gcc compiler
+$ gcc format_data.c
+$ ./a.out
+$ source setup-rv64-andes-compiler.sh // use MODIFIED gcc compiler
+$ make clang
+// output file inside teh build directory: assembly and binary code
