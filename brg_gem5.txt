@@ -9,6 +9,7 @@ $ source setup-brg.sh
 // alloy-gem5
 $ make build-gem5
 // before you build it, BE SURE to setup the parameters
+$ source setup-alloy-gem5-brg.sh  // use python package 2.7.11
 // located in spxcel-bmarks/spdm3/params.h
 $ make run-spdm3-1GHz  // system frequency: 1GHz CPU and accelerator
 
