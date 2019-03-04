@@ -3,8 +3,8 @@ $ ssh-keygen -o -t rsa -b 4096 -C "email@example.com"
 // press ENTER for default settings
 2. Paste the generated public key in your github/lab account
 
-
 // Firing the problems:
-$ ssh-add
+// Also, the permission for id_isa.pub should be 600!
 $ ssh-add -l
+$ ssh-add
 $ SSH_AUTH_SOCK=0 git clone ... // confirm that gnome-keyring is at fault on your system!
