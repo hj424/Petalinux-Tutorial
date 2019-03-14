@@ -1,0 +1,10 @@
+# state, next_state: registers
+@s.combinational # one cycle delay!
+def update_states():
+  state.in_.value = next_state.out
+@s.tick # 0 cycle delay
+def undate_states():
+  state = next_state # pointer
+@s.tick # 2-cycle delay
+def update_states():
+  state.in_.next = next_state.out
