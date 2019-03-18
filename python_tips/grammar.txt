@@ -1,8 +1,13 @@
 g = lambda x : x ** 2
 g(3)
 
-2D array:
-test = [[] for i in range(5)]
+# list comprehension
+t = [0 for i in range(vec_size)]
+tmp = [t for i in range(num_vec)]
+# Warning: the following expression will create a 2D array
+# like tmp = [t,t,t,...]
+# supposed grammar
+test = [[0 for i in range(vec_size)] for j in range(num_vec)]
 
 x = [1,2,3]
 f1(*x)  # suppoose x needs 2 variable, * will unpack list x and transmit 1 and 2 to f1
