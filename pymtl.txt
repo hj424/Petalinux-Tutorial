@@ -8,3 +8,7 @@ def undate_states():
 @s.tick # 2-cycle delay
 def update_states():
   state.in_.next = next_state.out
+
+# py.test
+--tb=style            traceback print mode (auto/long/short/line/native/no).
+py.test test/SparsePERTL_test.py --tb=short
