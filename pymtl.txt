@@ -8,6 +8,22 @@ def undate_states():
 @s.tick # 2-cycle delay
 def update_states():
   state.in_.next = next_state.out
+  
+# in combinational logic
+# the coding sequence does matter!!
+@s.combinational # one cycle delay!
+def stall_states():
+  stall = stall_A and stall_B and stall_C (1)
+  # update stall_A
+  # update stall_B
+  # update stall_C
+  
+def stall_states():
+  # update stall_A
+  # update stall_B
+  # update stall_C
+  stall = stall_A and stall_B and stall_C (2)
+# Get different circuit for (1) and (2)
 
 # py.test
 --tb=style            traceback print mode (auto/long/short/line/native/no).
