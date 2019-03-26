@@ -1,4 +1,4 @@
-# state, next_state: registers
+# state, next_state: registers ===================delays===
 @s.combinational # one cycle delay!
 def update_states():
   state.in_.value = next_state.out
@@ -9,7 +9,7 @@ def undate_states():
 def update_states():
   state.in_.next = next_state.out
   
-# in combinational logic
+# in combinational logic ================coding sequence===
 # the coding sequence does matter!!
 @s.combinational # one cycle delay!
 def stall_states():
@@ -25,6 +25,15 @@ def stall_states():
   stall = stall_A and stall_B and stall_C (2)
 # Get different circuit for (1) and (2)
 
-# py.test
+# It is impossible to put vectors in IO
+# The vector cannot be recgonized by the pymtl compiler
+
+#! it does not support the comparison with negative numbers:
+#  use reduce XNOR or the specific bits in 2's complement representation
+
+# Don't use 2D array to represent registers
+# can't elborate to verilog design!!
+
+# py.test ===================run & test design===
 --tb=style            traceback print mode (auto/long/short/line/native/no).
 py.test test/SparsePERTL_test.py --tb=short
