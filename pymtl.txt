@@ -34,6 +34,10 @@ def stall_states():
 # Don't use 2D array to represent registers
 # can't elborate to verilog design!!
 
+# Don't use extra local varible without specifing the data type!
+
 # py.test ===================run & test design===
 --tb=style            traceback print mode (auto/long/short/line/native/no).
-py.test test/SparsePERTL_test.py --tb=short
+py.test test/SparsePERTL_test.py --tb=short -s
+# elborating Verilog and dump VCD for debugging
+py.test test/SparsePERTL_test.py --tb=short --test-verilog --dump-vcd
