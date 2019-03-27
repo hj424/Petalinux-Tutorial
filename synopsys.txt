@@ -1,0 +1,4 @@
+# view VCD
+$ dev -full64
+or 
+$ gtkwave xx.vcd &
