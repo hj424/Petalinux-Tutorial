@@ -6,3 +6,6 @@ $ source activate myenv
 # install paskages
 /usr/local/anaconda3/bin/conda conda install -n myenv [package]
 e.g., /usr/local/anaconda3/bin/conda conda install -n myenv pytorch
+
+# check the stasus of GPUs
+nvidia-smi
