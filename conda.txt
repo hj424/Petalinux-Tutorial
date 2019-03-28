@@ -1,0 +1,8 @@
+# add export PATH=“/usr/local/anaconda3/bin:$PATH” to your .bashrc; then
+$ which anaconda
+$ /usr/local/anaconda3/bin/conda create -n myenv python=3 anaconda
+$ source activate myenv
+
+# install paskages
+/usr/local/anaconda3/bin/conda conda install -n myenv [package]
+e.g., /usr/local/anaconda3/bin/conda conda install -n myenv pytorch
