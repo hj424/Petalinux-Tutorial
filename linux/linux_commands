@@ -29,3 +29,10 @@ $ ls -ls /usr/bin/python*
 
 // check the available python libraries
 $ pid freeze
+
+// Type any one of the following command to find os name and version in Linux:
+$ cat /etc/os-release
+$ lsb_release -a
+$ hostnamectl
+// Type the following command to find Linux kernel version:
+$ uname -r
