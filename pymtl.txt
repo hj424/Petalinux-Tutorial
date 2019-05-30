@@ -1,3 +1,11 @@
+# pymtl in brg-vip
+$ source setup-brg.sh
+$ source setup-asic.sh
+
+# pymtl in zhang-01
+$ source /work/zhang/common/tools/pymtl/pymtl-setup.sh
+
+
 # state, next_state: registers ===================delays===
 @s.combinational # one cycle delay!
 def update_states():
