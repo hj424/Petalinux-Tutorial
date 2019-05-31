@@ -1,0 +1,6 @@
+# OpenVPN
+Links:
+https://openvpn.net/community-resources/how-to/#setting-up-your-own-certificate-authority-ca-and-generating-certificates-and-keys-for-an-openvpn-server-and-multiple-clients
+https://help.ubuntu.com/lts/serverguide/openvpn.html.en
+
+https://linuxconfig.org/how-to-open-allow-incoming-firewall-port-on-ubuntu-18-04-bionic-beaver-linux
