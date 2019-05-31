@@ -1,4 +1,7 @@
 // server domain names
+Obsolete one: zhang-precision-02.ece.cornell.edu
+Ubuntu IP: 132.236.59.106
+
 ecelinux.ece.cornell.edu // ecelinux
 zhang-0x.ece.cornell.edu 
 zhang-x1.ece.cornell.edu
