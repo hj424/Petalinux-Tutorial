@@ -4,3 +4,28 @@ https://openvpn.net/community-resources/how-to/#setting-up-your-own-certificate-
 https://help.ubuntu.com/lts/serverguide/openvpn.html.en
 
 https://linuxconfig.org/how-to-open-allow-incoming-firewall-port-on-ubuntu-18-04-bionic-beaver-linux
+
+# Check lkistening ports:
+$ sudo netstat -ntlp | grep LISTEN
+$ sudo netstat -tulpn
+
+# check port forwarding rule
+$ sudo iptables -t nat -vnL
+
+# show and delete rules by rule sequences
+# sudo iptables -L --line-numbers
+# sudo iptables -D INPUT 3
+
+# setup port forwarding rule
+
+$ iptables -t nat -A PREROUTING -d 132.236.59.106 -p tcp --dport 1194 -j DNAT --to-dest 10.8.0.1:1194
+$ iptables -t filter -A INPUT -p tcp -d 10.8.0.1 --dport 1194 -j ACCEPT
+
+
+# check running services
+$ service --status-all
+
+Tutorial:
+https://www.digitalocean.com/community/tutorials/how-to-set-up-an-openvpn-server-on-ubuntu-16-04
+zhang-precision-02
+IP: 132.236.59.106 
