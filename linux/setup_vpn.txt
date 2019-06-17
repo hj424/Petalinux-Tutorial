@@ -29,3 +29,6 @@ Tutorial:
 https://www.digitalocean.com/community/tutorials/how-to-set-up-an-openvpn-server-on-ubuntu-16-04
 zhang-precision-02
 IP: 132.236.59.106 
+
+Trouble shooting:
+https://askubuntu.com/questions/785537/openvpn-tls-handshake-failed-with-linux-server-windows-client
