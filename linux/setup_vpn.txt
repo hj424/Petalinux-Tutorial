@@ -33,6 +33,9 @@ IP: 132.236.59.106
 Trouble shooting for configuration:
 https://askubuntu.com/questions/785537/openvpn-tls-handshake-failed-with-linux-server-windows-client
 
+https://www.digitalocean.com/community/tutorials/how-to-set-up-an-openvpn-server-on-ubuntu-16-04
+Key Generation: step 6 and step 11 -------------------------------------------------------------
+
 1. OpenVPN is connected but the IP doesn't change: YOU should use it WITHOUT Cornell VPN!!!
 High-level idea: modify server configuration ro forward
 * Push commands: setup in the client side
