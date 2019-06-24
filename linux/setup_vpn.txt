@@ -39,7 +39,7 @@ High-level idea: modify server configuration ro forward
 route + redirect + dhcp-option DNS
 https://tunnelblick.net/cConnectedBut.html
 
-Trouble shooring for users:
+Trouble shooting for users:
 1. Tunnel link warning: A problem occurred while checking this computer's apparent public IP address.
 Quick answer: trivial warning, caused by the the unstable network
 
