@@ -30,5 +30,18 @@ https://www.digitalocean.com/community/tutorials/how-to-set-up-an-openvpn-server
 zhang-precision-02
 IP: 132.236.59.106 
 
-Trouble shooting:
+Trouble shooting for configuration:
 https://askubuntu.com/questions/785537/openvpn-tls-handshake-failed-with-linux-server-windows-client
+
+1. OpenVPN is connected but the IP doesn't change: YOU should use it WITHOUT Cornell VPN!!!
+High-level idea: modify server configuration ro forward
+* Push commands: setup in the client side
+route + redirect + dhcp-option DNS
+https://tunnelblick.net/cConnectedBut.html
+
+Trouble shooring for users:
+1. Tunnel link warning: A problem occurred while checking this computer's apparent public IP address.
+Quick answer: trivial warning, caused by the the unstable network
+
+2. Warning: This VPN may not connect in the future.
+Quick answer: version issue. Fix it later.
