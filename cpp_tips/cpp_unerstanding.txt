@@ -46,3 +46,6 @@ foo.member_func();
 int some_val = Foo::static_var;
 Foo::static_method();
 int max_int = std::numeric_limits<int>::max();
+
+e.g. CPPFLAGS: represents the flags passed to the pre-processor
+CXXFLAGS: represents the flags passed to the C++ compiler
