@@ -47,5 +47,6 @@ int some_val = Foo::static_var;
 Foo::static_method();
 int max_int = std::numeric_limits<int>::max();
 
+Why using CXX provide the consistency than CPP? Because CPP also means C Pre-Processor in some CPP flags.
 e.g. CPPFLAGS: represents the flags passed to the pre-processor
 CXXFLAGS: represents the flags passed to the C++ compiler
