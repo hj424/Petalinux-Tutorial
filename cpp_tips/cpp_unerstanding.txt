@@ -1,5 +1,5 @@
 ### 1. pass by value, pointer, and reference ###
-a. pass by value
+a. pass by value, copy the value to the invoked function, the original value can't be changed inside the invoked function!
 void f (int p){
   ...
 }
