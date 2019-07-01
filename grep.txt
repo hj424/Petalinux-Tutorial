@@ -1,4 +1,4 @@
-$ grep -rw "text" // find all "text" in the current directory recurrsively
+$ grep -nrw "text" ./  // find all "text" in the current directory recurrsively
 -r: recursively
 -w: display only line with the exact word
 -e: specify the string pattern
