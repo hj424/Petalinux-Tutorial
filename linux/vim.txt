@@ -38,3 +38,33 @@ use mouse in vim
 :set mouse=a
 
 # open two files ":/tabedit test.txt"; using gt to switch windows
+
+### install ctags on linux without sudo permission
+Download ctags source: http://prdownloads.sourceforge.net/ctags/ctags-5.8.tar.gz
+
+In our shell:
+$ tar zxf ctags-5.8.tar.gz
+$ cd ctags-5.8
+$ ./configure --prefix=$HOME
+$ make && make install
+This will compile and install ctags in your home directory. The resulting binary will be: $HOME/bin/ctags
+
+You will now have to modify your PATH environment variable prior to launching vim.
+
+$ vim $HOME/.bashrc (or whichever shell you're using)
+put this line in your .bashrc
+
+export PATH="$HOME/bin:$PATH"
+You will now need to resource your .bashrc (remember that .bashrc is normally only loaded from non-interactive shells. Make sure that you source .bashrc from .bash_profile)
+
+If you need to, modify your .bash_profile and make sure it has a line like:
+
+. $HOME/.bashrc
+or
+
+source $HOME/.bashrc
+To continue without closing your shell, simply type:
+
+$ . $HOME/.bashrc
+You can now launch vim and ctags will be working.
+
