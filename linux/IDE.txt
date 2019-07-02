@@ -1,0 +1,2 @@
+Visual Studio Code:
+Most frequently user guide: https://code.visualstudio.com/docs/editor/editingevolved
