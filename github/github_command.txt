@@ -26,3 +26,7 @@ $ git push -u origin name_of_new_branch  // push locally created branch to the s
 $ git remote set-url origin https://hj424@github.com/hj424/Petalinux-Tutorial.git
 
 Git large file storage > 100MB
+
+# reset to a old commit and commit it to the remote server
+git reset --hard <old-commit-id>
+git push -f <remote-name> <branch-name>
