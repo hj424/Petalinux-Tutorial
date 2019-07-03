@@ -1,0 +1,19 @@
+1. static function inside a class VS "free" normal functions
+Key notes: you can use the function inside a class without instantiate an object!
+But the static function can't use the private values defined in the class.
+e.g.
+class Foo {
+    Foo();
+    type A();
+    static int B();
+}
+In the main function, it is legal to call the static B function like followings:
+int main {
+    Foo.B()
+    Foo C;
+    C.A();
+    C.B()
+}
+Thus why static function? 
+(1) In the morden coding system, we prefer to encapsulate the functions (with similar functionality and same/short name) inside different classes.
+To use neat function name and avoiding the name confliction, we uaually create static function inside different classes. 
