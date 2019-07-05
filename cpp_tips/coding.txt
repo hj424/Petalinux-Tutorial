@@ -1,0 +1,2 @@
+1.Confusing coding styles
+while (a = b){}  // (1) assign value b to a; (2) determine whether enter the while loop by value b !!
