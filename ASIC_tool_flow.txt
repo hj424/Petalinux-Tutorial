@@ -1,0 +1,10 @@
+Start with synthesis:
+% make synth          # <-- this can take about a minute
+% make runtimes       # <-- check how long each step took
+% make debug-synth    # <-- bring up synthesis results in the GUI
+Continue with place-and-route:
+% make signoff        # <-- this can take about ten minutes
+% make debug-signoff  # <-- bring up the final layout in the GUI
+Run Calibre DRC and LVS:
+% make drc            # <-- these can run in parallel with -j
+% make lvs            # <-- these can run in parallel with -j
