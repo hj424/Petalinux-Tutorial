@@ -23,3 +23,15 @@ static variable: it will not be cleared after invokation
 
 3. classes:
 * default: private value that can only be accessed by the functions inside the class
+
+////////////////////////////////////////////////////////
+class example_class {
+  ......
+}
+example_class::example_class():   // constructor: runs when create an object
+{
+}
+example_class::example_class():   // destructor: runs when delete the object
+{
+}
+
