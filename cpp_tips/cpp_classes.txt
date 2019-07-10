@@ -32,6 +32,6 @@ example_class::example_class():   // constructor: runs when create an object
 {
 }
 example_class::example_class():   // destructor: runs when delete the object
-{
+{                                 // It is called by the compiler when the object goes out of the scope.
 }
 
