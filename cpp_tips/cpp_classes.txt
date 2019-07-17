@@ -35,3 +35,7 @@ example_class::example_class():   // destructor: runs when delete the object
 {                                 // It is called by the compiler when the object goes out of the scope.
 }
 
+object: obj; pointer to the obj: p_obj; member function of the obj: m_func
+dot operator ".": obj.m_func()
+arrow operator "->": p_obj->m_func()
+
