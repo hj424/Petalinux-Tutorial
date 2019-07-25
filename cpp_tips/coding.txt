@@ -1,2 +1,7 @@
 1.Confusing coding styles
 while (a = b){}  // (1) assign value b to a; (2) determine whether enter the while loop by value b !!
+
+2. ? selection
+a = 1?10:20 = 10; a = 0?10:20 = 20;
+a = 1?1?10:20:30 = 10; a = 1?0?10:20:30 = 20;
+a = 0?1?10:20:30 = 30; a = 0?0?10:20:30 = 30;
