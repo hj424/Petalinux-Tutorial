@@ -39,3 +39,6 @@ object: obj; pointer to the obj: p_obj; member function of the obj: m_func
 dot operator ".": obj.m_func()
 arrow operator "->": p_obj->m_func()
 
+5. Polymorphism in C++
+1. compile time polymorphism: function/operator overloading
+2. runtime polymorphism: function overriding; virtual function in the parent/base class, the function with same name is defined in the child/derived class
