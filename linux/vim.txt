@@ -24,6 +24,8 @@ press "n" to the next stirng in the file
 press "shift+n" to the last string in the file
 
 ":%s/VIRUS/SAFE/g" replaces all string "VIRUS" with "SAFE" 
+// count the number of matches
+:%s/pattern//gn
 # remove tabs in python script *****
 already have tabs, then *** ":retab"
 
