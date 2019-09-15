@@ -3,4 +3,7 @@ create_clock -name "ap_clock" -period 2.500 [get_ports clock]
 
 # Keep the same structure for all instantiation
 # Avoid flatten for this midule ROM_sbox
-(* keep_hierarchy = "yes" *) module ROM_sbox(
+For example:
+(* keep_hierarchy = "yes" *) 
+module ROM_sbox(
+!!!!! Or else, sometimes this submodule will just be optimized?!
