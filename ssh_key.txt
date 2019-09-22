@@ -8,3 +8,8 @@ $ ssh-keygen -o -t rsa -b 4096 -C "email@example.com"
 $ ssh-add -l
 $ ssh-add
 $ SSH_AUTH_SOCK=0 git clone ... // confirm that gnome-keyring is at fault on your system!
+
+!!! ssh login without password:
+https://www.shellhacks.com/ssh-login-without-password/
+!!! ssh config
+https://medium.com/tarkalabs/ssh-simplified-using-ssh-config-161406ba75d7
