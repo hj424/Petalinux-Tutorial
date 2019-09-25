@@ -1,5 +1,7 @@
 *** change default settings ***
 $ vi .vimrc
+  # paste code without any modification
+  set paste
   set smartindent
   set tabstop=2
   set shiftwidth=2
