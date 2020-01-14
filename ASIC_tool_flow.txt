@@ -1,0 +1,20 @@
+Start with synthesis:
+% make synth          # <-- this can take about a minute
+% make runtimes       # <-- check how long each step took
+% make debug-synth    # <-- bring up synthesis results in the GUI
+Continue with place-and-route:
+% make signoff        # <-- this can take about ten minutes
+% make debug-signoff  # <-- bring up the final layout in the GUI
+Run Calibre DRC and LVS:
+% make drc            # <-- these can run in parallel with -j
+% make lvs            # <-- these can run in parallel with -j
+
+
+# /steps/dc-synthesis/dc.tcl
+1. flatten hierarchy for possible optimization
+# /plugins/dc-synthesis/constraints.tcl
+1. adding input/output delays for each module
+# /plugins/innovous/always_source.tcl
+2. change floor plan ratio to fix the error of large amount of IO pins
+# core_aspect_ratio
+# core_density_target
