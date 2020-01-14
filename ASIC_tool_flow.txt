@@ -9,12 +9,12 @@ Run Calibre DRC and LVS:
 % make drc            # <-- these can run in parallel with -j
 % make lvs            # <-- these can run in parallel with -j
 
-
-# /steps/dc-synthesis/dc.tcl
 1. flatten hierarchy for possible optimization
+# /steps/dc-synthesis/dc.tcl
+2. adding input/output delays for each module
 # /plugins/dc-synthesis/constraints.tcl
-1. adding input/output delays for each module
+3. change floor plan ratio to fix the error of large amount of IO pins
 # /plugins/innovous/always_source.tcl
-2. change floor plan ratio to fix the error of large amount of IO pins
+And change the following parameters:
 # core_aspect_ratio
 # core_density_target
