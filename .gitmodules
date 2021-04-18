@@ -1,0 +1,3 @@
+[submodule "ref/HardFloat"]
+	path = ref/HardFloat
+	url = https://github.com/bsg-external/HardFloat.git
